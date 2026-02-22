@@ -1,6 +1,10 @@
 # 更新日誌
 
+[GitHub Releases](https://github.com/SeaLantern-Studio/SeaLantern/releases)
+
 ## v0.6.5 <Badge type="tip" text="最新" />
+
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/sea-lantern-v0.6.5)
 
 > 2026-02-20
 
@@ -27,6 +31,8 @@
 
 ## v0.6.2
 
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/sea-lantern-v0.6.2)
+
 > 2026-02-17
 
 ### 新功能
@@ -51,6 +57,8 @@
 
 ## v0.6.0
 
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/sea-lantern-v0.6.0)
+
 > 2026-02-16
 
 ### 新功能
@@ -74,6 +82,8 @@
 
 ## v0.5.0
 
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/sea-lantern-v0.5.0)
+
 > 2026-02-14
 
 大量更新，感謝每一位貢獻者。
@@ -81,6 +91,8 @@
 ---
 
 ## v0.4.1
+
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/v0.4.1)
 
 > 2026-02-14
 
@@ -91,6 +103,8 @@
 ---
 
 ## v0.4.0
+
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/v0.4.0)
 
 > 2026-02-14
 

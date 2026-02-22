@@ -59,16 +59,23 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           { text: '下载安装', link: '/zh/download' },
           { text: '快速开始', link: '/zh/getting-started' },
+          { text: '核心获取', link: '/zh/server-jar' },
+          { text: '使用教程', link: '/zh/tutorial' },
           { text: '功能总览', link: '/zh/features' },
-          { text: '更新日志', link: '/zh/changelog' },
+          { text: '常见问题', link: '/zh/faq' },
         ],
       },
       {
+        text: '项目信息',
+        items: [{ text: '更新日志', link: '/zh/changelog' }],
+      },
+      {
         text: '开发者',
+        collapsed: true,
         items: [
           { text: '贡献指南', link: '/zh/contributing' },
           { text: '项目结构', link: '/zh/structure' },
-          { text: '开发者名单', link: '/zh/developers' },
+          { text: '贡献者名单', link: '/zh/contributor' },
         ],
       },
     ],

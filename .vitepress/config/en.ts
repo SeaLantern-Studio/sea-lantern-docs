@@ -40,16 +40,23 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           { text: 'Download', link: '/en/download' },
           { text: 'Getting Started', link: '/en/getting-started' },
+          { text: 'Server JAR Guide', link: '/en/server-jar' },
+          { text: 'Tutorial', link: '/en/tutorial' },
           { text: 'Features', link: '/en/features' },
-          { text: 'Changelog', link: '/en/changelog' },
+          { text: 'FAQ', link: '/en/faq' },
         ],
       },
       {
+        text: 'Project Info',
+        items: [{ text: 'Changelog', link: '/en/changelog' }],
+      },
+      {
         text: 'Development',
+        collapsed: true,
         items: [
           { text: 'Contributing', link: '/en/contributing' },
           { text: 'Project Structure', link: '/en/structure' },
-          { text: 'Developers', link: '/en/developers' },
+          { text: 'Contributors', link: '/en/contributor' },
         ],
       },
     ],

@@ -59,16 +59,23 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           { text: '下載安裝', link: '/zh-tw/download' },
           { text: '快速開始', link: '/zh-tw/getting-started' },
+          { text: '伺服端核心取得', link: '/zh-tw/server-jar' },
+          { text: '使用教學', link: '/zh-tw/tutorial' },
           { text: '功能總覽', link: '/zh-tw/features' },
-          { text: '更新日誌', link: '/zh-tw/changelog' },
+          { text: '常見問題', link: '/zh-tw/faq' },
         ],
       },
       {
+        text: '專案資訊',
+        items: [{ text: '更新日誌', link: '/zh-tw/changelog' }],
+      },
+      {
         text: '開發者',
+        collapsed: true,
         items: [
           { text: '貢獻指南', link: '/zh-tw/contributing' },
           { text: '專案結構', link: '/zh-tw/structure' },
-          { text: '開發者名單', link: '/zh-tw/developers' },
+          { text: '貢獻者名單', link: '/zh-tw/contributor' },
         ],
       },
     ],
