@@ -10,25 +10,82 @@ function patchTitleLink() {
   }
 }
 
+const enhancerState: {
+  observer: MutationObserver | null
+  domReadyHandler: (() => void) | null
+  rafId: number | null
+} = {
+  observer: null,
+  domReadyHandler: null,
+  rafId: null,
+}
+
+function cleanupTitleLinkEnhancer() {
+  if (typeof document === 'undefined') return
+
+  if (enhancerState.observer) {
+    enhancerState.observer.disconnect()
+    enhancerState.observer = null
+  }
+
+  if (enhancerState.domReadyHandler) {
+    document.removeEventListener('DOMContentLoaded', enhancerState.domReadyHandler)
+    enhancerState.domReadyHandler = null
+  }
+
+  if (enhancerState.rafId !== null) {
+    cancelAnimationFrame(enhancerState.rafId)
+    enhancerState.rafId = null
+  }
+}
+
+function initTitleLinkEnhancer() {
+  if (typeof document === 'undefined') return
+
+  cleanupTitleLinkEnhancer()
+
+  const startObserve = () => {
+    const target = document.body
+    if (!target) {
+      enhancerState.rafId = requestAnimationFrame(startObserve)
+      return
+    }
+
+    patchTitleLink()
+    enhancerState.observer = new MutationObserver(patchTitleLink)
+    enhancerState.observer.observe(target, { childList: true, subtree: true })
+    enhancerState.rafId = null
+  }
+
+  if (document.readyState === 'loading') {
+    const onReady = () => {
+      enhancerState.domReadyHandler = null
+      startObserve()
+    }
+    enhancerState.domReadyHandler = onReady
+    document.addEventListener('DOMContentLoaded', onReady, { once: true })
+  } else {
+    startObserve()
+  }
+}
+
 export default {
   extends: DefaultTheme,
   enhanceApp() {
-    if (typeof document === 'undefined') return
-
-    const observer = new MutationObserver(patchTitleLink)
-    const tryObserve = () => {
-      const navbar = document.querySelector('.VPNavBar')
-      if (navbar) {
-        patchTitleLink()
-        observer.observe(navbar, { childList: true, subtree: true })
-      } else {
-        requestAnimationFrame(tryObserve)
-      }
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', tryObserve)
-    } else {
-      tryObserve()
-    }
+    initTitleLinkEnhancer()
   },
 } satisfies Theme
+
+type LocalImportMeta = ImportMeta & {
+  hot?: {
+    dispose(cb: () => void): void
+  }
+}
+
+const hot = (import.meta as LocalImportMeta).hot
+
+if (hot) {
+  hot.dispose(() => {
+    cleanupTitleLinkEnhancer()
+  })
+}

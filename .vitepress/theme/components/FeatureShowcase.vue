@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { computed, getCurrentInstance, ref, watch } from 'vue'
 
 interface FeatureItem {
   title: string
@@ -17,6 +17,8 @@ const props = withDefaults(defineProps<{
 })
 
 const activeIndex = ref(0)
+const instanceId = getCurrentInstance()?.uid ?? Math.random().toString(36).slice(2)
+const panelId = `sl-showcase-panel-${instanceId}`
 
 watch(
   () => props.items,
@@ -33,9 +35,14 @@ watch(
 )
 
 const activeItem = computed(() => props.items[activeIndex.value] ?? { title: '', desc: '', note: '' })
+const activeTabId = computed(() => `sl-showcase-tab-${instanceId}-${Math.max(activeIndex.value, 0)}`)
 
 function setActive(index: number) {
   activeIndex.value = index
+}
+
+function getTabId(index: number) {
+  return `sl-showcase-tab-${instanceId}-${index}`
 }
 </script>
 
@@ -50,8 +57,11 @@ function setActive(index: number) {
         <button
           class="sl-showcase__pill"
           :class="{ 'is-active': index === activeIndex }"
+          :id="getTabId(index)"
           role="tab"
           :aria-selected="index === activeIndex"
+          :aria-controls="panelId"
+          :tabindex="index === activeIndex ? 0 : -1"
           @mouseenter="setActive(index)"
           @focus="setActive(index)"
           @click="setActive(index)"
@@ -61,7 +71,13 @@ function setActive(index: number) {
       </div>
     </div>
 
-    <aside class="sl-showcase__panel" aria-live="polite">
+    <aside
+      class="sl-showcase__panel"
+      role="tabpanel"
+      :id="panelId"
+      :aria-labelledby="activeTabId"
+      aria-live="polite"
+    >
       <p class="sl-showcase__eyebrow">{{ panelTitle }}</p>
       <h3 class="sl-showcase__title">{{ activeItem.title }}</h3>
       <p class="sl-showcase__desc">{{ activeItem.desc }}</p>
