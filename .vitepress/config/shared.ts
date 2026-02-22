@@ -9,6 +9,7 @@ export const shared = defineConfig({
   base: '/',
   lastUpdated: true,
   cleanUrls: true,
+  sitemap: { hostname: 'https://docs.ideaflash.cn' },
 
   head: [
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
