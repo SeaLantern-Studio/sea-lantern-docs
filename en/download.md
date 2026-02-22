@@ -4,33 +4,42 @@ import { VERSION, RELEASE_BASE } from '../.vitepress/version'
 
 # Download
 
+Choose the package that matches your system, then install directly.  
+- Installer formats are recommended for most users (EXE on Windows, DMG on macOS).
+- If you want to review changes first, click the version link above.
+
 ## Latest Version
 
-Current latest version: **v{{ VERSION }}**
+Current latest version:
+<a :href="`/en/changelog#v${VERSION.replace(/\./g, '-')}`"><strong>v{{ VERSION }}</strong></a>
 
 ## Windows
 
 | Format | Description |
 |--------|-------------|
-| [EXE Installer]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_x64-setup.exe) | Recommended, double-click to install |
-| [MSI Installer]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_x64_zh-CN.msi) | Windows Installer format |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64-setup.exe`">EXE Installer</a> | Recommended, double-click to install |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64_zh-CN.msi`">MSI Installer</a> | Windows Installer format |
 
 ## macOS
 
 | Format | Description |
 |--------|-------------|
-| [DMG (Apple Silicon)]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_aarch64.dmg) | M1 / M2 / M3 / M4 |
-| [DMG (Intel)]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_x64.dmg) | x64 architecture |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_aarch64.dmg`">DMG (Apple Silicon)</a> | M1 / M2 / M3 / M4 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64.dmg`">DMG (Intel)</a> | x64 architecture |
 
 ## Linux
 
 | Format | Description |
 |--------|-------------|
-| [DEB]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_amd64.deb) | Debian / Ubuntu |
-| [RPM]({{ RELEASE_BASE }}/Sea.Lantern-{{ VERSION }}-1.x86_64.rpm) | Fedora / RHEL |
-| [AppImage]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_amd64.AppImage) | Universal format |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.deb`">DEB</a> | Debian / Ubuntu |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern-${VERSION}-1.x86_64.rpm`">RPM</a> | Fedora / RHEL |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.AppImage`">AppImage</a> | Universal format |
 
-Arch Linux users can install via AUR.
+Arch Linux users can install via AUR, for example:
+
+```bash
+yay -S sealantern
+```
 
 ## System Requirements
 

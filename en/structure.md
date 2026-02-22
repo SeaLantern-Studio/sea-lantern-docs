@@ -26,7 +26,7 @@ SeaLantern/
 │   ├── composables/        # Composables (useToast, useAsync, etc.)
 │   ├── stores/             # Pinia state management
 │   ├── router/             # Vue Router configuration
-│   ├── language/           # i18n language files (12 languages)
+│   ├── language/           # i18n language files (10 languages)
 │   ├── themes/             # Theme definitions (5 built-in themes)
 │   ├── styles/             # Global styles and CSS variables
 │   ├── types/              # TypeScript type definitions

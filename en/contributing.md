@@ -6,7 +6,7 @@ Thanks for your interest in Sea Lantern!
 
 - Node.js 20+
 - Rust stable
-- pnpm 9.x (enable via `corepack enable`)
+- pnpm 9.15.9 (enable via `corepack enable`)
 
 ## Development Steps
 

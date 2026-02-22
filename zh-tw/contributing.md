@@ -6,7 +6,7 @@
 
 - Node.js 20+
 - Rust stable
-- pnpm 9.x（透過 `corepack enable` 啟用）
+- pnpm 9.15.9（透過 `corepack enable` 啟用）
 
 ## 開發步驟
 

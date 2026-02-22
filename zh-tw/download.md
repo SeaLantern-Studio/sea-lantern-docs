@@ -4,33 +4,42 @@ import { VERSION, RELEASE_BASE } from '../.vitepress/version'
 
 # 下載安裝
 
+請依你的系統選擇對應安裝包下載並安裝。  
+- 建議優先使用安裝包格式（Windows 選 EXE，macOS 選 DMG）。
+- 若想先看改動內容，請點上方版本號查看更新日誌。
+
 ## 最新版本
 
-當前最新版本：**v{{ VERSION }}**
+當前最新版本：
+<a :href="`/zh-tw/changelog#v${VERSION.replace(/\./g, '-')}`"><strong>v{{ VERSION }}</strong></a>
 
 ## Windows
 
 | 格式 | 說明 |
 |------|------|
-| [EXE 安裝包]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_x64-setup.exe) | 推薦，雙擊安裝 |
-| [MSI 安裝包]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_x64_zh-CN.msi) | Windows Installer 格式 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64-setup.exe`">EXE 安裝包</a> | 推薦，雙擊安裝 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64_zh-CN.msi`">MSI 安裝包</a> | Windows Installer 格式 |
 
 ## macOS
 
 | 格式 | 說明 |
 |------|------|
-| [DMG (Apple Silicon)]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_aarch64.dmg) | M1 / M2 / M3 / M4 |
-| [DMG (Intel)]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_x64.dmg) | x64 架構 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_aarch64.dmg`">DMG (Apple Silicon)</a> | M1 / M2 / M3 / M4 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64.dmg`">DMG (Intel)</a> | x64 架構 |
 
 ## Linux
 
 | 格式 | 說明 |
 |------|------|
-| [DEB]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_amd64.deb) | Debian / Ubuntu |
-| [RPM]({{ RELEASE_BASE }}/Sea.Lantern-{{ VERSION }}-1.x86_64.rpm) | Fedora / RHEL |
-| [AppImage]({{ RELEASE_BASE }}/Sea.Lantern_{{ VERSION }}_amd64.AppImage) | 通用格式 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.deb`">DEB</a> | Debian / Ubuntu |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern-${VERSION}-1.x86_64.rpm`">RPM</a> | Fedora / RHEL |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.AppImage`">AppImage</a> | 通用格式 |
 
-Arch Linux 使用者可透過 AUR 安裝。
+Arch Linux 使用者可透過 AUR 安裝，例如：
+
+```bash
+yay -S sealantern
+```
 
 ## 系統需求
 

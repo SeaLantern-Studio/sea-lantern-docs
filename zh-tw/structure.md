@@ -26,7 +26,7 @@ SeaLantern/
 │   ├── composables/        # 組合式函式（useToast、useAsync 等）
 │   ├── stores/             # Pinia 狀態管理
 │   ├── router/             # Vue Router 路由配置
-│   ├── language/           # i18n 多語言檔案（12 種語言）
+│   ├── language/           # i18n 多語言檔案（10 種語言）
 │   ├── themes/             # 主題定義（5 套內建主題）
 │   ├── styles/             # 全域樣式和 CSS 變數
 │   ├── types/              # TypeScript 型別定義
