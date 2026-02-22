@@ -16,7 +16,7 @@ export const shared = defineConfig({
   ],
 
   themeConfig: {
-    logo: { src: '/logo.ico', link: MAIN_SITE_URL },
+    logo: '/logo.svg',
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/SeaLantern-Studio/SeaLantern' },

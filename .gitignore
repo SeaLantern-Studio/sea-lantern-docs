@@ -1,3 +1,7 @@
+# Vitepress
 node_modules
 .vitepress/dist
 .vitepress/cache
+
+# Trash
+.DS_Store

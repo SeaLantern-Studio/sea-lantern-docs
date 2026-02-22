@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/logo.ico" alt="logo" width="120" height="120">
+<img src="public/logo.svg" alt="logo" width="120" height="120">
 
 # Sea Lantern Docs
 
