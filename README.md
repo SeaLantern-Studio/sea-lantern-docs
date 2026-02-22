@@ -18,6 +18,8 @@
 
 [![docs](https://img.shields.io/website?url=https%3A%2F%2Fdocs.ideaflash.cn&style=for-the-badge&label=docs.ideaflash.cn)](https://docs.ideaflash.cn)
 
+[![docs](https://img.shields.io/website?url=https%3A%2F%2Fsealantern-studio.needhelp.icu&style=for-the-badge&label=sealantern-studio.needhelp.icu)](https://sealantern-studio.needhelp.icu)
+
 支持三种语言：简体中文 · English · 繁體中文
 
 ## 本地开发
