@@ -41,6 +41,20 @@ Arch Linux 使用者可透過 AUR 安裝，例如：
 yay -S sealantern
 ```
 
+### Ubuntu PPA（社群維護）
+
+Ubuntu 使用者可透過 PPA 快速安裝：
+
+```bash
+sudo add-apt-repository ppa:brianeee7878/sealantern
+sudo apt update
+sudo apt install sea-lantern-ppa-updater
+```
+
+支援 Ubuntu 20.04 LTS、22.04 LTS 與 24.04 LTS。
+
+該 PPA 為社群維護渠道，不屬於官方發布渠道；若遇到問題請改用上方 DEB 安裝包。
+
 ## 系統需求
 
 - Windows 10+ / macOS 10.15+ / Linux (glibc 2.31+)

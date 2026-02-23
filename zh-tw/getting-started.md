@@ -16,6 +16,10 @@ Sea Lantern 使用 WebView2 執行環境，**要求 Windows 10（版本 1909 及
 
 前往 [下載頁面](/zh-tw/download) 取得適合您作業系統的安裝包，雙擊執行即可完成安裝。
 
+Ubuntu 使用者也可使用 PPA 安裝（見下載頁 Linux 小節）。
+
+Arch Linux 使用者可透過 AUR 安裝（見下載頁 Linux 小節）。
+
 ## 2. 取得伺服端核心
 
 您需要一個 Minecraft 伺服端 JAR 檔案來建立伺服器。如果您還沒有，請參考 [伺服端核心取得](/zh-tw/server-jar) 頁面下載。

@@ -16,6 +16,10 @@ Sea Lantern 使用 WebView2 运行时，**要求 Windows 10（版本 1909 及以
 
 前往 [下载页面](/zh/download) 获取适合你操作系统的安装包，双击运行即可完成安装。
 
+Ubuntu 用户也可以使用 PPA 安装（见下载页 Linux 小节）。
+
+Arch Linux 用户可通过 AUR 安装（见下载页 Linux 小节）。
+
 ## 2. 获取服务端核心
 
 你需要一个 Minecraft 服务端 JAR 文件来创建服务器。如果你还没有，请参考 [核心获取](/zh/server-jar) 页面下载。

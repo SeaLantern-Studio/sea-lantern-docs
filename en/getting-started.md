@@ -16,6 +16,10 @@ Sea Lantern uses the WebView2 runtime and **requires Windows 10 (version 1909+) 
 
 Go to the [Download page](/en/download) to get the installer for your operating system. Double-click to install.
 
+Ubuntu users can also install via PPA (see the Linux section on the download page).
+
+Arch Linux users can install via AUR (see the Linux section on the download page).
+
 ## 2. Get a Server JAR
 
 You need a Minecraft server JAR file to create a server. If you don't have one yet, check the [Server JAR Guide](/en/server-jar) to download one.
