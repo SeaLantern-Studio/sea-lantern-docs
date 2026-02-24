@@ -42,3 +42,5 @@ SeaLantern/
 │   └── Cargo.toml
 └── .github/workflows/      # CI/CD（检查、构建、发布）
 ```
+
+[详细目录结构](/STRUCTURE.md)
