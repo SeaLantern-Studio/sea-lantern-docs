@@ -125,11 +125,11 @@ Sea Lantern 基于 Tauri 2，要求 Windows 10（版本 1909 及以上）或 Win
 2. **更新 Sea Lantern**
    - AUR 包会随着官方版本更新而更新，使用 AUR 包管理器检查更新：
      ```bash
-     yay -Syu sea-lantern
+     yay -Syu sealantern
      ```
    - 如果更新后出现问题，可以回滚到之前的版本：
      ```bash
-     yay -S sea-lantern-<previous_version>
+     yay -S sealantern-<previous_version>
      ```
 
 3. **更新失败的解决步骤**
@@ -140,12 +140,12 @@ Sea Lantern 基于 Tauri 2，要求 Windows 10（版本 1909 及以上）或 Win
 
    如果是发现使用命令行进行更新的时候发现依旧是旧版本，可以尝试使用命令更新库：
    ```bash
-   yay -Syu --devel sea-lantern
+   yay -Syu --devel sealantern
    ```
 
    如果还是不行可以尝试删除缓存：
    ```bash
-   yay -Sc sea-lantern
+   yay -Sc sealantern
    ```
 
 ## 其他常见问题
