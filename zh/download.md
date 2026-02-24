@@ -36,7 +36,7 @@ import { VERSION, RELEASE_BASE } from '../.vitepress/version'
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.AppImage`">AppImage</a> | 通用格式 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}.pkg.tar.zst`">pkg.tar.zst</a> | Archlinux可安装包|
 
-Arch Linux 用户可通过 AUR 安装，例如：
+Arch Linux 用户可通过 AUR 安装，例如：@
 
 ```bash
 yay -S sealantern
