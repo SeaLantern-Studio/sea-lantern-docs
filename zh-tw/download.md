@@ -34,7 +34,7 @@ import { VERSION, RELEASE_BASE } from '../.vitepress/version'
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.deb`">DEB</a> | Debian / Ubuntu |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern-${VERSION}-1.x86_64.rpm`">RPM</a> | Fedora / RHEL |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.AppImage`">AppImage</a> | 通用格式 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}.pkg.tar.zst`>pkg.tar.zst</a> | Archlinux 可安裝套件 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}.pkg.tar.zst`">pkg.tar.zst</a> | Archlinux 可安裝套件 |
 
 Arch Linux 使用者可透過 AUR 安裝，例如：
 
