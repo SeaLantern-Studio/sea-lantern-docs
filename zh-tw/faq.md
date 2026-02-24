@@ -122,12 +122,12 @@ sea-lantern
 2. **更新 Sea Lantern**
 - AUR 包會隨著官方版本更新而更新，使用 AUR 包管理器檢查更新：
 ```bash
-yay -Syu sea-lantern
+yay -Syu sealantern
 ```
 - 如果更新後出現問題，可以回滾到之前的版本：
 ```bash
-yay -S sea-lantern-<previous_version>
-``````
+yay -S sealantern-<previous_version>
+```
 
 3. **更新失敗的解決步驟**
 - 如果更新後 Sea Lantern 無法啟動，首先不要慌張，嘗試回滾到之前的版本。
@@ -136,12 +136,12 @@ yay -S sea-lantern-<previous_version>
 - 如果你有相關能力，可以嘗試自行修復問題並提交 Pull Request，協助社群更快地解決問題。
 如果在使用指令列進行更新時發現仍是舊版本，可以嘗試使用指令更新套件：
 ```bash
-yay -Syu --devel sea-lantern
+yay -Syu --devel sealantern
 ``````
 
 如果還是不行，可以嘗試刪除快取：
 ```bash
-yay -Sc sea-lantern
+yay -Sc sealantern
 ``````
 
 ## 其他常見問題

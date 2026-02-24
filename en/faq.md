@@ -125,11 +125,11 @@ sea-lantern
 2. **Updating Sea Lantern**
 - The AUR package updates along with the official version. Use your AUR helper to check for updates:
 ```bash
-yay -Syu sea-lantern
+yay -Syu sealantern
 ```
 - If issues occur after an update, you can roll back to a previous version:
 ```bash
-yay -S sea-lantern-<previous_version>
+yay -S sealantern-<previous_version>
 ```
 
 3. **Steps to Resolve Update Failures**
@@ -140,12 +140,12 @@ yay -S sea-lantern-<previous_version>
 
 If you find that running the update command still results in the old version, try updating the development package:
 ```bash
-yay -Syu --devel sea-lantern
+yay -Syu --devel sealantern
 ```
 
 If that still doesn't work, try clearing the cache:
 ```bash
-yay -Sc sea-lantern
+yay -Sc sealantern
 ```
 
 ## Other Questions
