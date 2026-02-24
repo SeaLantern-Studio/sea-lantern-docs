@@ -51,7 +51,6 @@ pnpm preview             # 预览构建结果
 ├── public/               # 静态资源
 └── index.md              # 首页（重定向到 /zh/intro）
 ```
-[详细目录结构](STRUCTURE.md)
 
 ## 部署
 
