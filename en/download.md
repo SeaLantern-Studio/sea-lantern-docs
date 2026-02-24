@@ -34,6 +34,7 @@ Current latest version:
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.deb`">DEB</a> | Debian / Ubuntu |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern-${VERSION}-1.x86_64.rpm`">RPM</a> | Fedora / RHEL |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.AppImage`">AppImage</a> | Universal format |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}.pkg.tar.zst`">pkg.tar.zst</a> | Archlinux Installable package|
 
 Arch Linux users can install via AUR, for example:
 

@@ -104,6 +104,50 @@ If you need a visual guide, see this video: [VxKex Extended Kernel Installation 
 - Sea Lantern is developed and tested on modern Windows systems — legacy Windows compatibility is not officially supported
 :::
 
+## ArchLinux Installation Guide
+
+### ArchLinux users can install Sea Lantern via AUR. The package manager will automatically handle dependencies to ensure the software runs correctly.
+
+### Update Issues on Arch
+Due to ArchLinux's rolling release system, some dependency libraries may receive major updates, which can cause Sea Lantern to stop working. Therefore, if your file system is BTRFS, it is recommended to use the snapshot feature to back up your system before updating, so you can quickly roll back if issues arise.
+
+1. **Installing Sea Lantern**
+- Install using an AUR helper (like yay):
+```bash
+yay -S sealantern
+```
+***Note: It is `sealantern`, not `sea-lantern`***
+- Once installed, you can find Sea Lantern in the application menu and launch it, or use the command line:
+```bash
+sea-lantern
+```
+
+2. **Updating Sea Lantern**
+- The AUR package updates along with the official version. Use your AUR helper to check for updates:
+```bash
+yay -Syu sea-lantern
+```
+- If issues occur after an update, you can roll back to a previous version:
+```bash
+yay -S sea-lantern-<previous_version>
+```
+
+3. **Steps to Resolve Update Failures**
+- If Sea Lantern fails to start after an update, don’t panic. Try rolling back to the previous version first.
+- Then check GitHub to see if other users have reported similar issues or wait for the developers to release a fix.
+- Meanwhile, it is recommended not to delete the old package files so you can roll back at any time.
+- If you are able, you can try fixing the issue yourself and submit a Pull Request to help the community resolve the problem faster.
+
+If you find that running the update command still results in the old version, try updating the development package:
+```bash
+yay -Syu --devel sea-lantern
+```
+
+If that still doesn't work, try clearing the cache:
+```bash
+yay -Sc sea-lantern
+```
+
 ## Other Questions
 
 ### What permissions does Sea Lantern need?
