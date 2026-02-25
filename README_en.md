@@ -6,7 +6,7 @@
 
 The official documentation site for [Sea Lantern](https://github.com/SeaLantern-Studio/SeaLantern), built with [VitePress](https://vitepress.dev)
 
-[![deploy](https://img.shields.io/github/actions/workflow/status/SeaLantern-Studio/sea-lantern-docs/deploy.yml?style=flat&logo=github&label=Deploy)](https://github.com/SeaLantern-Studio/sea-lantern-docs/actions) [![docs](https://img.shields.io/website?url=https%3A%2F%2Fdocs.ideaflash.cn&style=flat&label=Docs)](https://docs.ideaflash.cn) [![license](https://img.shields.io/github/license/SeaLantern-Studio/sea-lantern-docs?style=flat&label=License)](./LICENSE)
+[![docs](https://img.shields.io/website?url=https%3A%2F%2Fdocs.ideaflash.cn&style=flat&label=Docs)](https://docs.ideaflash.cn) [![license](https://img.shields.io/github/license/SeaLantern-Studio/sea-lantern-docs?style=flat&label=License)](./LICENSE)
 
 <kbd>[简体中文](README.md)</kbd> <kbd>English</kbd>
 
@@ -52,7 +52,7 @@ pnpm preview             # Preview build output
 
 ## Deployment
 
-Pushing to `main` triggers GitHub Actions to build and deploy automatically.
+The site is hosted via Alibaba Cloud ESA edge deployment, and release is handled on the platform side.
 
 ## Contributing
 

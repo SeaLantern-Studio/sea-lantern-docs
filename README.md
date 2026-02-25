@@ -6,7 +6,7 @@
 
 [Sea Lantern（海晶灯）](https://github.com/SeaLantern-Studio/SeaLantern) 官方文档站，基于 [VitePress](https://vitepress.dev) 构建
 
-[![deploy](https://img.shields.io/github/actions/workflow/status/SeaLantern-Studio/sea-lantern-docs/deploy.yml?style=flat&logo=github&label=部署)](https://github.com/SeaLantern-Studio/sea-lantern-docs/actions) [![docs](https://img.shields.io/website?url=https%3A%2F%2Fdocs.ideaflash.cn&style=flat&label=文档站)](https://docs.ideaflash.cn) [![license](https://img.shields.io/github/license/SeaLantern-Studio/sea-lantern-docs?style=flat&label=许可证)](./LICENSE)
+[![docs](https://img.shields.io/website?url=https%3A%2F%2Fdocs.ideaflash.cn&style=flat&label=文档站)](https://docs.ideaflash.cn) [![license](https://img.shields.io/github/license/SeaLantern-Studio/sea-lantern-docs?style=flat&label=许可证)](./LICENSE)
 
 <kbd>简体中文</kbd> <kbd>[English](README_en.md)</kbd>
 
@@ -54,7 +54,7 @@ pnpm preview             # 预览构建结果
 
 ## 部署
 
-推送到 `main` 分支后，GitHub Actions 自动构建并部署到服务器。
+站点由阿里云 ESA 边缘部署托管，发布流程在平台侧完成。
 
 ## 参与贡献
 
