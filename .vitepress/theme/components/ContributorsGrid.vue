@@ -20,12 +20,41 @@ async function fetchContributors() {
   try {
     const url = `https://api.github.com/repos/${props.repo}/contributors?per_page=${props.perPage}`
     const res = await fetch(url, { headers: { Accept: 'application/vnd.github.v3+json' } })
-    if (!res.ok) throw new Error(`HTTP ${res.status}`)
+
+    if (!res.ok) {
+      const status = res.status
+      const statusText = res.statusText || ''
+      // Log detailed technical information for debugging
+      console.error('[ContributorsGrid] Failed to fetch contributors', {
+        url,
+        status,
+        statusText,
+      })
+
+      let friendlyMessage = 'Failed to load contributors. Please try again later.'
+
+      if (status === 403) {
+        friendlyMessage = 'GitHub rate limit reached. Please try again in a few minutes.'
+      } else if (status === 404) {
+        friendlyMessage = 'Contributors could not be found for this repository.'
+      } else if (status === 429) {
+        friendlyMessage = 'Too many requests to GitHub. Please wait a moment and try again.'
+      }
+
+      throw new Error(friendlyMessage)
+    }
+
     const data = await res.json()
-    if (!Array.isArray(data)) throw new Error('Invalid response')
+
+    if (!Array.isArray(data)) {
+      console.error('[ContributorsGrid] Unexpected contributors response shape', data)
+      throw new Error('Failed to load contributors.')
+    }
+
     contributors.value = data.slice(0, props.max)
   } catch (e: any) {
-    error.value = e.message || String(e)
+    console.error('[ContributorsGrid] Error while loading contributors', e)
+    error.value = e?.message || 'Failed to load contributors.'
   } finally {
     loading.value = false
   }
