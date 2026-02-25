@@ -59,4 +59,20 @@ sudo apt install sea-lantern-ppa-updater
 ## 系统要求
 
 - Windows 10+ / macOS 10.15+ / Linux (glibc 2.31+)
-- Java 8+（用于运行 Minecraft 服务端）
+- Java 8及以上（用于运行 Minecraft 服务端）
+## Java要求
+
+•来自Minecraft Wiki的Minecraft对Java的运行标准：（https://zh.minecraft.wiki/w/Java%E7%89%88）
+•Java配置
+·自1.12（17w13a）起，运行Minecraft的最低要求为Java 8。若玩家不确定设备是否已安装Java 8，安装程序会默认自动安装并使用支持Minecraft运行的Java版本。
+·自1.17（21w19a）起，运行Minecraft的最低要求为Java 16。
+·自1.18（1.18-pre2）起，运行Minecraft的最低要求为Java 17。
+·自1.20.5（24w14a）起，运行Minecraft的最低要求为Java 21，且操作系统须为64位。
+·自26.1（26.1-snapshot-1）起，运行Minecraft的最低要求为Java 25。
+•需要注意的是，若使用的Java版本与操作系统位数不匹配（32位或64位）、使用部分Java 7版本，或安装多个Java版本来运行Minecraft Java版，可能会出现一些运行问题。
+
+•运行Java版需要稳定的互联网连接，用于下载游戏文件、验证用户名以及连接多人游戏服务器。至少需要连接一次互联网以完成Java版的下载和运行；之后可在断开互联网连接的情况下游玩，但接收更新或联机需在联网状态下进行。
+
+•Java版无法在Windows RT平板上运行。
+
+•Java版无法在Chromebook上原生运行，但在设置Crouton后可运行Java（及Java版Minecraft）。
