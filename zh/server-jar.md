@@ -41,7 +41,7 @@ Spigot 不提供直接下载的 JAR 文件，需要使用 BuildTools 编译。�
 
 ## Forge
 
-Mod 服务端，用于运行 Java 版 Mod。
+老牌 Mod 服务端，用于运行 Java 版的Forge端Mod。
 
 - 下载地址：[Forge 官网](https://files.minecraftforge.net/)
 - 适用场景：需要运行 Forge Mod 的模组服务器
@@ -53,8 +53,7 @@ Mod 服务端，用于运行 Java 版 Mod。
 
 - 下载地址：[Fabric 官网](https://fabricmc.net/use/installer/)
 - 适用场景：需要运行 Fabric Mod 的模组服务器
-- 注意：**不兼容 Bukkit/Spigot 插件**，需要使用 Fabric Mod
-
+- 注意：**不兼容 Bukkit/Spigot 插件，需要使用 Fabric Mod**大部分 Fabric Mod 还需要您将 Fabric API 安装到 mods 文件夹中。来源：[Fabic 中文网](https://fabricmc.net.cn/use/server/)
 ## Purpur
 
 基于 Paper 的分支，提供更多配置选项。
