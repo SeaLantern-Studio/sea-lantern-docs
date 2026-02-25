@@ -5,48 +5,16 @@ const props = withDefaults(defineProps<{
   repo: string
   perPage?: number
   max?: number
-  cacheTTL?: number
 }>(), {
   perPage: 100,
   max: 100,
-  cacheTTL: 60 * 60 * 1000,
 })
 
 const loading = ref(true)
 const error = ref('')
 const contributors = ref<any[]>([])
 
-const cacheKey = `github-contributors:${props.repo}:${props.perPage}:${props.max}`
-
-function loadCache() {
-  try {
-    const cached = localStorage.getItem(cacheKey)
-    if (!cached) return null
-    const { timestamp, data } = JSON.parse(cached)
-    if (Date.now() - timestamp > props.cacheTTL) {
-      localStorage.removeItem(cacheKey)
-      return null
-    }
-    return data
-  } catch {
-    return null
-  }
-}
-
-function saveCache(data: any[]) {
-  try {
-    localStorage.setItem(cacheKey, JSON.stringify({ timestamp: Date.now(), data }))
-  } catch {}
-}
-
 async function fetchContributors() {
-  const cached = loadCache()
-  if (cached) {
-    contributors.value = cached.slice(0, props.max)
-    loading.value = false
-    return
-  }
-
   loading.value = true
   error.value = ''
   try {
@@ -56,7 +24,6 @@ async function fetchContributors() {
     const data = await res.json()
     if (!Array.isArray(data)) throw new Error('Invalid response')
     contributors.value = data.slice(0, props.max)
-    saveCache(contributors.value)
   } catch (e: any) {
     error.value = e.message || String(e)
   } finally {
