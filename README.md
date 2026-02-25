@@ -62,4 +62,4 @@ pnpm preview             # 预览构建结果
 
 ## 许可证
 
-[GPL-3.0](./LICENSE)
+[MIT](./LICENSE)
