@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { useData } from 'vitepress'
 
 const props = withDefaults(defineProps<{
   repo: string
@@ -10,8 +11,13 @@ const props = withDefaults(defineProps<{
   max: 100,
 })
 
+const { theme } = useData()
+const i18n = computed(() => theme.value.contributorsGrid || {})
+
 const loading = ref(true)
 const error = ref('')
+const hoveredId = ref<number | null>(null)
+
 interface Contributor {
   id: number
   login: string
@@ -39,14 +45,14 @@ async function fetchContributors() {
         statusText,
       })
 
-      let friendlyMessage = 'Failed to load contributors. Please try again later.'
+      let friendlyMessage = i18n.value.errorGeneric || 'Failed to load contributors. Please try again later.'
 
       if (status === 403) {
-        friendlyMessage = 'GitHub rate limit reached. Please try again in a few minutes.'
+        friendlyMessage = i18n.value.errorRateLimit || 'GitHub rate limit reached. Please try again in a few minutes.'
       } else if (status === 404) {
-        friendlyMessage = 'Contributors could not be found for this repository.'
+        friendlyMessage = i18n.value.errorNotFound || 'Contributors could not be found for this repository.'
       } else if (status === 429) {
-        friendlyMessage = 'Too many requests to GitHub. Please wait a moment and try again.'
+        friendlyMessage = i18n.value.errorTooManyRequests || 'Too many requests to GitHub. Please wait a moment and try again.'
       }
 
       throw new Error(friendlyMessage)
@@ -56,7 +62,7 @@ async function fetchContributors() {
 
     if (!Array.isArray(data)) {
       console.error('[ContributorsGrid] Unexpected contributors response shape', data)
-      throw new Error('Failed to load contributors.')
+      throw new Error(i18n.value.errorGeneric || 'Failed to load contributors.')
     }
 
     const mapped: Contributor[] = data.map((d: any) => ({
@@ -70,7 +76,7 @@ async function fetchContributors() {
     contributors.value = mapped.slice(0, props.max)
   } catch (e: any) {
     console.error('[ContributorsGrid] Error while loading contributors', e)
-    error.value = e?.message || 'Failed to load contributors.'
+    error.value = e?.message || i18n.value.errorGeneric || 'Failed to load contributors.'
   } finally {
     loading.value = false
   }
@@ -81,7 +87,7 @@ onMounted(fetchContributors)
 
 <template>
   <div class="sl-contrib">
-    <div v-if="loading" class="sl-contrib__message">Loading contributors…</div>
+    <div v-if="loading" class="sl-contrib__message">{{ i18n.loading || 'Loading contributors…' }}</div>
     <div v-else-if="error" class="sl-contrib__message">{{ error }}</div>
     <div v-else class="sl-contrib__card">
       <div class="sl-contrib__grid">
@@ -92,10 +98,18 @@ onMounted(fetchContributors)
           class="sl-contrib__item"
           target="_blank"
           rel="noopener noreferrer"
-          :title="`${c.login} — ${c.contributions} contributions`"
+          @mouseenter="hoveredId = c.id"
+          @mouseleave="hoveredId = null"
         >
           <img :src="c.avatar_url" :alt="c.login" class="sl-contrib__avatar" />
           <span class="sl-contrib__name">{{ c.login }}</span>
+          <div
+            class="sl-contrib__tooltip"
+            :class="{ 'is-visible': hoveredId === c.id }"
+            :aria-hidden="hoveredId !== c.id"
+          >
+            {{ c.login }} — {{ c.contributions }} {{ i18n.contributionsLabel || 'contributions' }}
+          </div>
         </a>
       </div>
     </div>
@@ -128,6 +142,7 @@ onMounted(fetchContributors)
   padding: 4px 2px;
   border-radius: 6px;
   transition: background-color 0.2s;
+  position: relative;
 }
 .sl-contrib__item:hover {
   background-color: var(--vp-c-bg-mute);
@@ -146,5 +161,40 @@ onMounted(fetchContributors)
   overflow: hidden;
   text-overflow: ellipsis;
   color: var(--vp-c-text-1);
+}
+.sl-contrib__tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(4px) scale(0.98);
+  margin-top: 2px;
+  padding: 6px 12px;
+  background-color: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 6px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  z-index: 10;
+  pointer-events: none;
+  border: 1px solid var(--vp-c-divider);
+  opacity: 0;
+  transform-origin: 50% 0%;
+  transition: opacity 180ms cubic-bezier(.2,.9,.2,1), transform 180ms cubic-bezier(.2,.9,.2,1);
+}
+.sl-contrib__tooltip.is-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.sl-contrib__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 180ms cubic-bezier(.2,.9,.2,1);
+}
+.sl-contrib__item:hover .sl-contrib__avatar {
+  transform: translateY(-4px) scale(1.03);
 }
 </style>
