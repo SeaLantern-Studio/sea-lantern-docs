@@ -72,7 +72,9 @@ function initTitleLinkEnhancer() {
 
 export default {
   extends: DefaultTheme,
-  enhanceApp({ app }) {
+  enhanceApp(ctx) {
+    DefaultTheme.enhanceApp?.(ctx)
+    const { app } = ctx
     initTitleLinkEnhancer()
     app.component('ContributorsGrid', ContributorsGrid)
   },
