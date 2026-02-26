@@ -74,4 +74,4 @@ sudo apt install sea-lantern-ppa-updater
 
 - Java版无法在Windows RT平板上运行。
 
-- ava版无法在Chromebook上原生运行，但在设置Crouton后可运行Java（及Java版Minecraft）。
+- Java版无法在Chromebook上原生运行，但在设置Crouton后可运行Java（及Java版Minecraft）。
