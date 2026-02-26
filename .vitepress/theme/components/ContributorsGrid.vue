@@ -12,7 +12,15 @@ const props = withDefaults(defineProps<{
 
 const loading = ref(true)
 const error = ref('')
-const contributors = ref<any[]>([])
+interface Contributor {
+  id: number
+  login: string
+  avatar_url: string
+  html_url: string
+  contributions: number
+}
+
+const contributors = ref<Contributor[]>([])
 
 async function fetchContributors() {
   loading.value = true
@@ -51,7 +59,15 @@ async function fetchContributors() {
       throw new Error('Failed to load contributors.')
     }
 
-    contributors.value = data.slice(0, props.max)
+    const mapped: Contributor[] = data.map((d: any) => ({
+      id: d.id,
+      login: d.login,
+      avatar_url: d.avatar_url,
+      html_url: d.html_url,
+      contributions: typeof d.contributions === 'number' ? d.contributions : 0,
+    }))
+
+    contributors.value = mapped.slice(0, props.max)
   } catch (e: any) {
     console.error('[ContributorsGrid] Error while loading contributors', e)
     error.value = e?.message || 'Failed to load contributors.'
