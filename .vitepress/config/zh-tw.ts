@@ -18,6 +18,15 @@ export const zhTw = defineConfig({
       copyright: '© 2024-present SeaLantern Studio',
     },
 
+    contributorsGrid: {
+      contributionsLabel: '次貢獻',
+      loading: '載入貢獻者卡片中…',
+      errorGeneric: '載入貢獻者卡片失敗，請稍後重試。',
+      errorRateLimit: '已達到 GitHub 請求限制，請稍後再試。',
+      errorNotFound: '未找到該儲存庫的貢獻者。',
+      errorTooManyRequests: '請求過於頻繁，請稍等片刻後重試。',
+    },
+
     docFooter: {
       prev: '上一頁',
       next: '下一頁',

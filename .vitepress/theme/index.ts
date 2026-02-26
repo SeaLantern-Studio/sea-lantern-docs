@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import type { Theme } from 'vitepress'
 import { MAIN_SITE_URL } from '../urls'
+import ContributorsGrid from './components/ContributorsGrid.vue'
 
 /** 将 .VPNavBarTitle 内的链接 href 强制指向主站 */
 function patchTitleLink() {
@@ -71,8 +72,11 @@ function initTitleLinkEnhancer() {
 
 export default {
   extends: DefaultTheme,
-  enhanceApp() {
+  enhanceApp(ctx) {
+    DefaultTheme.enhanceApp?.(ctx)
+    const { app } = ctx
     initTitleLinkEnhancer()
+    app.component('ContributorsGrid', ContributorsGrid)
   },
 } satisfies Theme
 

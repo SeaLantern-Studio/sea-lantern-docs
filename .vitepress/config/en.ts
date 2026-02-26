@@ -17,6 +17,15 @@ export const en = defineConfig({
       message: 'Released under the GPL-3.0 License',
       copyright: '© 2024-present SeaLantern Studio',
     },
+
+    contributorsGrid: {
+      contributionsLabel: 'contributions',
+      loading: 'Loading contributors card…',
+      errorGeneric: 'Failed to load contributors card. Please try again later.',
+      errorRateLimit: 'GitHub rate limit reached. Please try again in a few minutes.',
+      errorNotFound: 'Contributors could not be found for this repository.',
+      errorTooManyRequests: 'Too many requests to GitHub. Please wait a moment and try again.',
+    },
   },
 })
 
