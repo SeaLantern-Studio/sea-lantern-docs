@@ -20,8 +20,6 @@
 ## Directory Overview
 
 ```
-
-[Detailed Directory Structure](/en/structure-full)
 SeaLantern/
 ├── src/                    # Frontend source (Vue 3)
 │   ├── api/                # Tauri invoke wrappers
@@ -52,3 +50,5 @@ SeaLantern/
 │   └── Cargo.toml
 └── .github/workflows/      # CI/CD (check, build, release)
 ```
+
+[Detailed Directory Structure](/en/structure-full)

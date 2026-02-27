@@ -20,8 +20,6 @@
 ## 目錄概覽
 
 ```
-
-[詳細目錄結構](/zh-tw/structure-full)
 SeaLantern/
 ├── src/                    # 前端原始碼 (Vue 3)
 │   ├── api/                # Tauri invoke 封裝
@@ -52,3 +50,5 @@ SeaLantern/
 │   └── Cargo.toml
 └── .github/workflows/      # CI/CD（檢查、建構、發佈）
 ```
+
+[詳細目錄結構](/zh-tw/structure-full)
