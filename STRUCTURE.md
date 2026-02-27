@@ -1,5 +1,13 @@
 # Sea Lantern 项目结构
 
+## v1.0.0 结构同步（2026-02-26）
+
+- 创建流程相关代码已拆分到 `src/components/views/create/`（如 `createServerWorkflow.ts`、`StartupSelectionStep.vue`）
+- 页面继续组件化拆分：`about/`、`home/`、`paint/`、`player/`、`settings/`
+- API 层新增/完善：`src/api/downloader.ts`、`src/api/mcs_plugins.ts`
+- 视图层新增 `src/views/DownloadFileView.vue`，插件页保留 `PluginsView / PluginsPageView / PluginCategoryView / PluginPageView`
+- CI 工作流聚焦为：`check.yml`、`release.yml`、`issue-check.yml`、`aur-publish.yml`
+
 ## 项目概览
 
 Sea Lantern（海晶灯）是一个轻量化的 Minecraft 服务器管理工具，基于 Tauri 2 + Rust + Vue 3 技术栈。

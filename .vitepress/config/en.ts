@@ -57,14 +57,16 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: 'Project Info',
-        items: [{ text: 'Changelog', link: '/en/changelog' }],
+        items: [
+          { text: 'Changelog', link: '/en/changelog' },
+          { text: 'Project Structure', link: '/en/structure' },
+        ],
       },
       {
         text: 'Development',
         collapsed: true,
         items: [
           { text: 'Contributing', link: '/en/contributing' },
-          { text: 'Project Structure', link: '/en/structure' },
           { text: 'Contributors', link: '/en/contributor' },
         ],
       },

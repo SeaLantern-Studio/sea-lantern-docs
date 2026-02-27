@@ -2,7 +2,29 @@
 
 [GitHub Releases](https://github.com/SeaLantern-Studio/SeaLantern/releases)
 
-## v0.6.5 <Badge type="tip" text="Latest" />
+## v1.0.0 <Badge type="tip" text="Latest" />
+
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/v1.0.0)
+
+> 2026-02-26
+
+### Highlights
+- Server creation workflow upgraded with modpack auto-install, smart startup-mode detection, and custom startup commands
+- Added import capability to bring existing servers/startup files into Sea Lantern
+- Plugin system and plugin market improvements: permission panel behavior, state retention, and better download failure feedback
+- Expanded Java auto-detection paths and one-click Java installation when runtime is missing
+- Upgraded homepage charting with ECharts for clearer status visibility
+
+### Stability & Engineering
+- Continued i18n hardening by replacing hardcoded text and fixing multilingual display issues
+- Fixed issues in server creation flow, plugin permission panel placement, drag box rendering, and window restore behavior
+- Refactored core views (Settings/Home/Player/Paint) to reduce coupling and improve maintainability
+- Reworked CI/CD and frontend quality-check workflows for cleaner release pipelines
+- Added ARM architecture support in release assets (including Windows/Linux)
+
+---
+
+## v0.6.5
 
 [GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/sea-lantern-v0.6.5)
 

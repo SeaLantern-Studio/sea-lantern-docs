@@ -9,6 +9,14 @@
 - **包管理**: pnpm
 - **代码检查**: oxlint + oxfmt
 
+## v1.0.0 结构同步（2026-02-26）
+
+- 创建流程拆分到 `src/components/views/create/`，支持导入来源、启动方式识别与自定义命令
+- 页面子组件进一步模块化：`about/`、`home/`、`paint/`、`player/`、`settings/`
+- API 层新增/完善：`src/api/downloader.ts`、`src/api/mcs_plugins.ts`
+- 视图层包含 `DownloadFileView.vue` 与插件页多视图（`PluginsView / PluginsPageView / PluginCategoryView / PluginPageView`）
+- CI/CD 工作流当前为：`check.yml`、`release.yml`、`issue-check.yml`、`aur-publish.yml`
+
 ## 目录概览
 
 ```
@@ -43,4 +51,4 @@ SeaLantern/
 └── .github/workflows/      # CI/CD（检查、构建、发布）
 ```
 
-[详细目录结构](/STRUCTURE.md)
+[详细目录结构](/zh/structure-full)

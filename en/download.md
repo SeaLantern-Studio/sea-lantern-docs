@@ -13,12 +13,18 @@ Choose the package that matches your system, then install directly.
 Current latest version:
 <a :href="`/en/changelog#v${VERSION.replace(/\./g, '-')}`"><strong>v{{ VERSION }}</strong></a>
 
+::: tip Architecture update (v1.0.0+)
+Windows and Linux ARM64 packages are now available. Choose the one matching your device architecture.
+:::
+
 ## Windows
 
 | Format | Description |
 |--------|-------------|
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64-setup.exe`">EXE Installer</a> | Recommended, double-click to install |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64_zh-CN.msi`">MSI Installer</a> | Windows Installer format |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_arm64-setup.exe`">EXE Installer (ARM64)</a> | For Windows on ARM |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_arm64_zh-CN.msi`">MSI Installer (ARM64)</a> | Windows Installer (ARM64) |
 
 ## macOS
 
@@ -26,15 +32,20 @@ Current latest version:
 |--------|-------------|
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_aarch64.dmg`">DMG (Apple Silicon)</a> | M1 / M2 / M3 / M4 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64.dmg`">DMG (Intel)</a> | x64 architecture |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_aarch64.app.tar.gz`">app.tar.gz (Apple Silicon)</a> | Portable archive |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_x64.app.tar.gz`">app.tar.gz (Intel)</a> | Portable archive |
 
 ## Linux
 
 | Format | Description |
 |--------|-------------|
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.deb`">DEB</a> | Debian / Ubuntu |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern-${VERSION}-1.x86_64.rpm`">RPM</a> | Fedora / RHEL |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_arm64.deb`">DEB (ARM64)</a> | Debian / Ubuntu ARM64 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern-${VERSION}-1.x86_64.rpm`">RPM</a> | Fedora / RHEL (x86_64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern-${VERSION}-1.aarch64.rpm`">RPM (ARM64)</a> | Fedora / RHEL (aarch64) |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.AppImage`">AppImage</a> | Universal format |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}.pkg.tar.zst`">pkg.tar.zst</a> | Arch Linux installable package |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_aarch64.AppImage`">AppImage (ARM64)</a> | Universal format (ARM64) |
+| <a :href="`${RELEASE_BASE}/sealantern-${VERSION}-1-x86_64.pkg.tar.zst`">pkg.tar.zst</a> | Arch Linux package (x86_64) |
 
 Arch Linux users can install via AUR, for example:
 

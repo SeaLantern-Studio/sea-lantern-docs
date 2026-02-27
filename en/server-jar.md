@@ -107,6 +107,7 @@ When starting any Minecraft server for the first time, you must accept the [Mine
 ### What to Do After Downloading?
 
 1. Most server types provide a `.jar` file (projects like Pumpkin may provide executables)
-2. Click "Create Server" in Sea Lantern
+2. Click "Create Server" in Sea Lantern and choose an import source (JAR / existing server / startup script)
 3. For `.jar`, import it directly; for executables, use script startup mode (`bat` / `sh`)
-4. See [Getting Started](/en/getting-started) for detailed steps
+4. The wizard tries to auto-detect startup mode; you can manually adjust and set a custom startup command if needed
+5. See [Getting Started](/en/getting-started) for detailed steps

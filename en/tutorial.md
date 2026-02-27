@@ -4,15 +4,21 @@ This page covers how to use each feature in Sea Lantern.
 
 ## Creating Your First Server
 
-### Import Server JAR
+### Import Source (JAR / Existing Server / Startup Script)
 
 1. Click the "Create Server" button on the main screen
-2. In the setup wizard, click "Choose File" to import your server JAR
+2. In the setup wizard, choose an import source: server JAR, existing server directory, or startup script (`bat` / `sh`)
 3. If you don't have a server JAR yet, check the [Server JAR Guide](/en/server-jar)
+
+### Startup Detection and Custom Command
+
+- Sea Lantern automatically detects the startup mode from imported content
+- If detection does not match your expectation, switch modes manually and set a custom startup command
+- Modpack auto-install is available in the creation flow to reduce first-run manual steps
 
 ### Select Java Version
 
-After importing the JAR, Sea Lantern will list all detected Java versions on your system. Choose the one that matches your Minecraft version:
+After import is complete, Sea Lantern will list all detected Java versions on your system. Choose the one that matches your Minecraft version:
 
 | Minecraft Version | Recommended Java |
 |-------------------|-----------------|
