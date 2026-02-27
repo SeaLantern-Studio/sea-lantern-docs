@@ -76,14 +76,16 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: '项目信息',
-        items: [{ text: '更新日志', link: '/zh/changelog' }],
+        items: [
+          { text: '更新日志', link: '/zh/changelog' },
+          { text: '项目结构', link: '/zh/structure' },
+        ],
       },
       {
         text: '开发者',
         collapsed: true,
         items: [
           { text: '贡献指南', link: '/zh/contributing' },
-          { text: '项目结构', link: '/zh/structure' },
           { text: '贡献者名单', link: '/zh/contributor' },
         ],
       },

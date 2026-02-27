@@ -9,6 +9,14 @@
 - **套件管理**: pnpm
 - **程式碼檢查**: oxlint + oxfmt
 
+## v1.0.0 結構同步（2026-02-26）
+
+- 建立伺服器流程拆分到 `src/components/views/create/`，支援匯入來源、啟動方式偵測與自訂命令
+- 頁面子元件進一步模組化：`about/`、`home/`、`paint/`、`player/`、`settings/`
+- API 層新增/完善：`src/api/downloader.ts`、`src/api/mcs_plugins.ts`
+- 視圖層包含 `DownloadFileView.vue` 與插件多視圖（`PluginsView / PluginsPageView / PluginCategoryView / PluginPageView`）
+- CI/CD 工作流目前為：`check.yml`、`release.yml`、`issue-check.yml`、`aur-publish.yml`
+
 ## 目錄概覽
 
 ```
@@ -42,3 +50,5 @@ SeaLantern/
 │   └── Cargo.toml
 └── .github/workflows/      # CI/CD（檢查、建構、發佈）
 ```
+
+[詳細目錄結構](/zh-tw/structure-full)

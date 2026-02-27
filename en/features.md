@@ -32,6 +32,7 @@ Lua script-based plugin extension mechanism:
 - Plugin permission management panel
 - Sandboxed plugin runtime
 - Plugin install / enable / disable / delete workflow
+- Plugin market entry with improved failure feedback and state retention
 
 ## Theme System
 
@@ -55,6 +56,7 @@ Lua script-based plugin extension mechanism:
 - Auto-detect Java runtimes installed on the system
 - Built-in Java downloader for one-click installation
 - Manual Java path selection with validation support
+- Expanded scan paths for common install locations to reduce missed detections
 
 ## Mod Management
 
@@ -66,6 +68,9 @@ Lua script-based plugin extension mechanism:
 
 - Guided workflow to lower setup friction for new servers
 - Supports `jar` / `bat` / `sh` startup modes
+- Supports importing existing servers or startup files
+- Smart startup-mode detection with custom startup command support
+- Modpack auto-install is available during the creation flow
 - Includes first-launch guidance for EULA-related steps
 
 ## Safe Shutdown

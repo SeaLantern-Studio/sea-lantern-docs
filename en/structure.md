@@ -9,6 +9,14 @@
 - **Package Manager**: pnpm
 - **Linting**: oxlint + oxfmt
 
+## v1.0.0 Structure Sync (2026-02-26)
+
+- Server-creation flow is split under `src/components/views/create/` (import source, startup detection, custom command)
+- View internals are further modularized under `about/`, `home/`, `paint/`, `player/`, and `settings/`
+- API layer additions/updates include `src/api/downloader.ts` and `src/api/mcs_plugins.ts`
+- View layer includes `DownloadFileView.vue` and multi-view plugin pages (`PluginsView / PluginsPageView / PluginCategoryView / PluginPageView`)
+- Active CI/CD workflows: `check.yml`, `release.yml`, `issue-check.yml`, `aur-publish.yml`
+
 ## Directory Overview
 
 ```
@@ -42,3 +50,5 @@ SeaLantern/
 │   └── Cargo.toml
 └── .github/workflows/      # CI/CD (check, build, release)
 ```
+
+[Detailed Directory Structure](/en/structure-full)

@@ -22,7 +22,7 @@ Arch Linux users can install via AUR (see the Linux section on the download page
 
 ## 2. Get a Server JAR
 
-You need a Minecraft server JAR file to create a server. If you don't have one yet, check the [Server JAR Guide](/en/server-jar) to download one.
+You can create a new server from a Minecraft server JAR, or import an existing server directory/startup script. If you don't have a core file yet, check the [Server JAR Guide](/en/server-jar) to download one.
 
 ::: tip Recommendation
 For most players, we recommend [Paper](https://papermc.io/downloads/paper) — great performance and a rich plugin ecosystem.
@@ -42,10 +42,11 @@ Different Minecraft versions require different Java versions:
 ## 4. Create a Server
 
 1. Click the "Create Server" button
-2. Import your downloaded server JAR file
-3. Select the Java runtime version
-4. Name your server
-5. Accept the Minecraft EULA on first launch
+2. Choose an import source (JAR, existing server, or startup script)
+3. Finish startup-mode detection in the wizard; customize startup command if needed
+4. Select the Java runtime version (or install one-click if missing)
+5. Name your server and confirm parameters
+6. Accept the Minecraft EULA on first launch
 
 ## 5. Start the Server
 

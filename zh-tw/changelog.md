@@ -2,7 +2,29 @@
 
 [GitHub Releases](https://github.com/SeaLantern-Studio/SeaLantern/releases)
 
-## v0.6.5 <Badge type="tip" text="最新" />
+## v1.0.0 <Badge type="tip" text="最新" />
+
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/v1.0.0)
+
+> 2026-02-26
+
+### 重點新增
+- 建立伺服器流程升級：支援整合包自動安裝、智慧識別開服方式、可自訂開服命令
+- 新增匯入能力，可將既有伺服器/啟動檔接入 Sea Lantern 管理
+- 插件系統與插件市場持續增強：權限面板、狀態保留、下載失敗提示等體驗改善
+- Java 偵測路徑擴充，常見安裝目錄識別率更高，缺失時可一鍵下載安裝
+- 首頁圖表能力升級（ECharts），狀態展示更直覺
+
+### 穩定性與工程
+- 持續完善 i18n，替換硬編碼文字並修復多語言顯示細節
+- 修復建立流程、插件權限面板、拖曳框、視窗還原等問題
+- 重構 Settings/Home/Player/Paint 等核心頁面，降低耦合並提升可維護性
+- CI/CD 與品質檢查流程重構，發布鏈路更清晰
+- 發布資產新增 ARM 架構支援（含 Windows/Linux）
+
+---
+
+## v0.6.5
 
 [GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/sea-lantern-v0.6.5)
 
