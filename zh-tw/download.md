@@ -1,5 +1,5 @@
 <script setup>
-import { VERSION, RELEASE_BASE } from '../.vitepress/version'
+import { VERSION, RELEASE_BASE, ASSET_VERSION, ARCH_PKG_ASSET_VERSION } from '../.vitepress/version'
 </script>
 
 # 下載安裝
@@ -21,17 +21,17 @@ Windows 與 Linux 已提供 ARM64 安裝包，可依裝置架構選擇下載。
 
 | 格式 | 說明 |
 |------|------|
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64-setup.exe`">EXE 安裝包</a> | 推薦，雙擊安裝 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64_zh-CN.msi`">MSI 安裝包</a> | Windows Installer 格式 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_arm64-setup.exe`">EXE 安裝包 (ARM64)</a> | 適用 Windows on ARM |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_arm64_zh-CN.msi`">MSI 安裝包 (ARM64)</a> | Windows Installer (ARM64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64-setup.exe`">EXE 安裝包</a> | 推薦，雙擊安裝 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64_zh-CN.msi`">MSI 安裝包</a> | Windows Installer 格式 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64-setup.exe`">EXE 安裝包 (ARM64)</a> | 適用 Windows on ARM |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64_zh-CN.msi`">MSI 安裝包 (ARM64)</a> | Windows Installer (ARM64) |
 
 ## macOS
 
 | 格式 | 說明 |
 |------|------|
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_aarch64.dmg`">DMG (Apple Silicon)</a> | M1 / M2 / M3 / M4 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_x64.dmg`">DMG (Intel)</a> | x64 架構 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_aarch64.dmg`">DMG (Apple Silicon)</a> | M1 / M2 / M3 / M4 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64.dmg`">DMG (Intel)</a> | x64 架構 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_aarch64.app.tar.gz`">app.tar.gz (Apple Silicon)</a> | 可攜壓縮包 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_x64.app.tar.gz`">app.tar.gz (Intel)</a> | 可攜壓縮包 |
 
@@ -39,13 +39,13 @@ Windows 與 Linux 已提供 ARM64 安裝包，可依裝置架構選擇下載。
 
 | 格式 | 說明 |
 |------|------|
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.deb`">DEB</a> | Debian / Ubuntu |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_arm64.deb`">DEB (ARM64)</a> | Debian / Ubuntu ARM64 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern-${VERSION}-1.x86_64.rpm`">RPM</a> | Fedora / RHEL (x86_64) |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern-${VERSION}-1.aarch64.rpm`">RPM (ARM64)</a> | Fedora / RHEL (aarch64) |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_amd64.AppImage`">AppImage</a> | 通用格式 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${VERSION}_aarch64.AppImage`">AppImage (ARM64)</a> | 通用格式 (ARM64) |
-| <a :href="`${RELEASE_BASE}/sealantern-${VERSION}-1-x86_64.pkg.tar.zst`">pkg.tar.zst</a> | Arch Linux 可安裝套件 (x86_64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_amd64.deb`">DEB</a> | Debian / Ubuntu |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64.deb`">DEB (ARM64)</a> | Debian / Ubuntu ARM64 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern-${ASSET_VERSION}.x86_64.rpm`">RPM</a> | Fedora / RHEL (x86_64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern-${ASSET_VERSION}.aarch64.rpm`">RPM (ARM64)</a> | Fedora / RHEL (aarch64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_amd64.AppImage`">AppImage</a> | 通用格式 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_aarch64.AppImage`">AppImage (ARM64)</a> | 通用格式 (ARM64) |
+| <a :href="`${RELEASE_BASE}/sealantern-${ARCH_PKG_ASSET_VERSION}-x86_64.pkg.tar.zst`">pkg.tar.zst</a> | Arch Linux 可安裝套件 (x86_64) |
 
 Arch Linux 使用者可透過 AUR 安裝，例如：
 
