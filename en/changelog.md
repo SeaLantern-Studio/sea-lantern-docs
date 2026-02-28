@@ -2,7 +2,20 @@
 
 [GitHub Releases](https://github.com/SeaLantern-Studio/SeaLantern/releases)
 
-## v1.0.0 <Badge type="tip" text="Latest" />
+## v1.0.1 <Badge type="tip" text="Latest" />
+
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/v1.0.1)
+
+> 2026-02-27
+
+### Fixes & Improvements
+- Replaced installer links
+- Added commit conventions and formatting hooks
+- Optimized terminal log system with xtermjs and sqlite
+
+---
+
+## v1.0.0
 
 [GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/v1.0.0)
 

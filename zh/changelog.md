@@ -2,7 +2,20 @@
 
 [GitHub Releases](https://github.com/SeaLantern-Studio/SeaLantern/releases)
 
-## v1.0.0 <Badge type="tip" text="最新" />
+## v1.0.1 <Badge type="tip" text="最新" />
+
+[GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/v1.0.1)
+
+> 2026-02-27
+
+### 修复与优化
+- 更换安装器链接
+- 增加提交规范与格式化钩子
+- 使用 xtermjs 与 sqlite 优化终端日志系统
+
+---
+
+## v1.0.0
 
 [GitHub Release](https://github.com/SeaLantern-Studio/SeaLantern/releases/tag/v1.0.0)
 
