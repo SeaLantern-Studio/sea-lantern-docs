@@ -56,6 +56,7 @@ function nav(): DefaultTheme.NavItem[] {
     { text: '功能总览', link: '/zh/features' },
     { text: '更新日志', link: '/zh/changelog' },
     { text: '贡献指南', link: '/zh/contributing' },
+    { text: '隐私与服务协议', link: '/zh/privacy'},
   ]
 }
 
@@ -72,13 +73,14 @@ function sidebar(): DefaultTheme.Sidebar {
           { text: '使用教程', link: '/zh/tutorial' },
           { text: '功能总览', link: '/zh/features' },
           { text: '常见问题', link: '/zh/faq' },
-        ],
+          ],
       },
       {
         text: '项目信息',
         items: [
           { text: '更新日志', link: '/zh/changelog' },
           { text: '项目结构', link: '/zh/structure' },
+          { text: '隐私与服务协议', link: '/zh/privacy'},
         ],
       },
       {
