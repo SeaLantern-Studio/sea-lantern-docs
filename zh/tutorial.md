@@ -38,6 +38,8 @@
 
 首次启动时，Sea Lantern 会提示你同意 Minecraft EULA。确认后服务器才能正常运行。
 
+[官方EULA解释](https://www.minecraft.net/zh-hans/eula)
+
 ## 控制台
 
 控制台是 Sea Lantern 的核心界面，提供以下功能：
