@@ -167,27 +167,35 @@ OP（管理员）拥有服务器的最高权限。
 
 **管理类插件：**
 
-| 插件 | 功能 |
-|------|------|
-| EssentialsX | 基础指令集（传送、家、经济等） |
-| LuckPerms | 权限管理 |
-| WorldEdit | 强大的地图编辑工具 |
-| WorldGuard | 区域保护和权限管理 |
+| 插件 | 功能 | 链接 |
+|------|------|------|
+| EssentialsX | 基础指令集（传送、家、经济等） | <https://essentialsx.net/downloads> | 
+| LuckPerms | 权限管理 |<https://luckperms.net/download>|
+| WorldEdit | 强大的地图编辑工具 |<https://modrinth.com/plugin/worldedit>|
+| WorldGuard | 区域保护和权限管理 |<https://modrinth.com/plugin/worldguard/version/7.0.11>|
+
+
+**服务器安全插件：**
+
+| 插件 | 功能 | 链接 |
+|------|------|------|
+| Authme | 提供服务器登录密码保护（离线服务器必加） |<https://www.spigotmc.org/resources/authmereloaded.6269/>|
+
 
 **游戏增强类插件：**
 
-| 插件 | 功能 |
-|------|------|
-| CoreProtect | 方块日志/回滚 |
-| Multiverse-Core | 多世界管理 |
-| DiscordSRV | 服务器与 Discord 集成 |
+| 插件 | 功能 | 链接 |
+|------|------|------|
+| CoreProtect | 方块日志/回滚 |<https://modrinth.com/plugin/coreprotect>|
+| Multiverse-Core | 多世界管理 |<https://modrinth.com/plugin/multiverse-core>|
+| DiscordSRV | 服务器与 Discord 集成 |<https://www.spigotmc.org/resources/discordsrv.18494/>|
 
 **经济系统插件：**
 
-| 插件 | 功能 |
-|------|------|
-| Vault | 经济/权限 API（需要配合经济插件使用） |
-| Shopkeepers | 商人 NPC 系统 |
+| 插件 | 功能 | 链接 |
+|------|------|------|
+| Vault | 经济/权限 API（需要配合经济插件使用） |<https://www.spigotmc.org/resources/vault.34315/>|
+| Shopkeepers | 商人 NPC 系统 |<https://www.spigotmc.org/resources/shopkeepers.80756/>|
 
 ### 插件兼容性注意事项
 
