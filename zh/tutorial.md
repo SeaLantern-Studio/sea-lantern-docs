@@ -179,7 +179,7 @@ OP（管理员）拥有服务器的最高权限。
 
 | 插件 | 功能 | 链接 |
 |------|------|------|
-| AuthMe | 提供服务器登录密码保护（离线服务器必加） |<https://www.spigotmc.org/resources/authmereloaded.6269/>|
+| Authme | 提供服务器登录密码保护（离线服务器必加） |<https://www.spigotmc.org/resources/authmereloaded.6269/>|
 
 
 **游戏增强类插件：**
