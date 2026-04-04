@@ -178,7 +178,7 @@ OP（管理員）擁有伺服器的最高權限。
 
 | 插件 | 功能 | 連結 |
 |------|------|------|
-| Authme | 提供伺服器登入密碼保護（離線伺服器必加） |<https://www.spigotmc.org/resources/authmereloaded.6269/>|
+| AuthMe | 提供伺服器登入密碼保護（離線伺服器必加） |<https://www.spigotmc.org/resources/authmereloaded.6269/>|
 
 **遊戲增強類插件：**
 
