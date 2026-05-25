@@ -7,8 +7,8 @@ import { VERSION, RELEASE_BASE, ASSET_VERSION, RPM_ASSET_VERSION, ARCH_PKG_ASSET
 按你的系统选择对应安装包下载并安装。  
 - 建议优先使用安装包格式（Windows 选 EXE，macOS 选 DMG）。
 - 较为特殊的是Docker
-  0. 此版本无头，这代表着你可以在服务器运行
-  0. 此版本跨平台，可以在支持docker的所有平台运行
+  1. 此版本无头，这代表着你可以在服务器运行
+  2. 此版本跨平台，可以在支持docker的所有平台运行
 - 如需先看改动内容，点击上方版本号查看更新日志。
 
 ## 最新版本

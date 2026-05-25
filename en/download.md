@@ -7,8 +7,8 @@ import { VERSION, RELEASE_BASE, ASSET_VERSION, RPM_ASSET_VERSION, ARCH_PKG_ASSET
 Choose the package that matches your system, then install directly.  
 - Installer formats are recommended for most users (EXE on Windows, DMG on macOS).
 - Docker is relatively special
-    0. This version is headless, which means you can run it on a server
-    0. This version is cross-platform and can run on all platforms that support Docker
+    1. This version is headless, which means you can run it on a server
+    2. This version is cross-platform and can run on all platforms that support Docker
 - If you want to review changes first, click the version link above.
 
 ## Latest Version
