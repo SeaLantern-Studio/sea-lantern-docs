@@ -83,6 +83,22 @@ sudo apt install sea-lantern-ppa-updater
 
 該 PPA 為社群維護渠道，不屬於官方發布渠道；若遇到問題請改用上方 DEB 安裝包。
 
+## Docker
+1. 安裝docker詳見部分[安裝docker](https://www.bilibili.com/video/BV1vm421T7Kw/?share_source=copy_web&vd_source=67ab86499fd78344263cc23e969c3fe4)
+2. 拉取最新的海晶燈docker鏡像
+```bash
+docker pull penetr4t10n/sealantern:latest
+```
+3. 運行最新的海晶燈錄像
+tip:docker內的網路環境是隔離的所以要把web端口和伺服器端口暴露
+```
+docker run -d 
+--name sealantern 
+-p 3000:3000 
+-p 25565:25565/tcp 
+penetr4t10n/sealantern:latest
+```
+
 ## 系統需求
 
 - Windows 10+ / macOS 10.15+ / Linux (glibc 2.31+)

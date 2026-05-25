@@ -83,6 +83,22 @@ Supports Ubuntu 20.04 LTS, 22.04 LTS, and 24.04 LTS.
 
 This PPA is community-maintained and not an official release channel. If you run into issues, use the DEB package above.
 
+## Docker
+1. For detailed docker installation, see [Install Docker](https://www.bilibili.com/video/BV1vm421T7Kw/?share_source=copy_web&vd_source=67ab86499fd78344263cc23e969c3fe4)
+2. Pull the latest Seal Lantern docker image
+```bash
+docker pull penetr4t10n/sealantern:latest
+```
+3. Run the latest Seal Lantern recording
+tip: The network environment inside docker is isolated, so you need to expose the web port and server port
+```
+docker run -d 
+--name sealantern 
+-p 3000:3000 
+-p 25565:25565/tcp 
+penetr4t10n/sealantern:latest
+```
+
 ## System Requirements
 
 - Windows 10+ / macOS 10.15+ / Linux (glibc 2.31+)
