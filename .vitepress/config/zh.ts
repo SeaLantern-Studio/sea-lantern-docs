@@ -87,8 +87,18 @@ function sidebar(): DefaultTheme.Sidebar {
         text: '开发者',
         collapsed: true,
         items: [
-          { text: '贡献指南', link: '/zh/contributing' },
           { text: '贡献者名单', link: '/zh/contributor' },
+          {
+            text: '开发者文档',
+            collapsed: true,
+            items: [
+          { text:'语言系统',link:'/zh/dev/language-system'},
+          { text:'AI 开发指南',link:'/zh/dev/ai_guide'},
+          { text:'贡献指南',link:'/zh/dev/CONTRIBUTING'},
+          { text:'项目结构',link:'/zh/dev/STRUCTURE'},
+          { text:'插件API',link:'/zh/dev/plugin_api'},
+      ]
+    }
         ],
       },
     ],
