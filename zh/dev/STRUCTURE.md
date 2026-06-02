@@ -73,7 +73,7 @@ src/
 - `update.ts`：应用更新
 - `upload.ts`：上传相关接口
 
-其中 [`src/api/plugin.ts`](src/api/plugin.ts) 与 [`src/api/mcs_plugins.ts`](src/api/mcs_plugins.ts) 分别对应两套不同插件体系：
+其中 `src/api/plugin.ts` 与`src/api/mcs_plugins.ts`分别对应两套不同插件体系：
 
 1. Sea Lantern 的 Lua 插件系统
 2. Minecraft 服务端自身的插件文件管理
@@ -176,8 +176,8 @@ src-tauri/src/
 
 其中：
 
-- [`src-tauri/src/commands/plugin.rs`](src-tauri/src/commands/plugin.rs) 负责 Sea Lantern Lua 插件系统的安装、启停、市场、UI 快照、上下文菜单回调与权限日志读取。
-- [`src-tauri/src/commands/mcs_plugin.rs`](src-tauri/src/commands/mcs_plugin.rs) 负责指定 Minecraft 服务器目录下的插件文件扫描、启停、删除与安装。
+- `src-tauri/src/commands/plugin.rs` 负责 Sea Lantern Lua 插件系统的安装、启停、市场、UI 快照、上下文菜单回调与权限日志读取。
+- `src-tauri/src/commands/mcs_plugin.rs`负责指定 Minecraft 服务器目录下的插件文件扫描、启停、删除与安装。
 
 ### `src-tauri/src/models/`
 
@@ -191,7 +191,7 @@ src-tauri/src/
 - `settings.rs`
 - `mod.rs`
 
-其中 [`src-tauri/src/models/plugin.rs`](src-tauri/src/models/plugin.rs) 既定义插件清单结构，也定义权限元数据、依赖描述、插件市场信息、侧边栏配置、UI 页面配置等核心类型。
+其中 `src-tauri/src/models/plugin.rs` 既定义插件清单结构，也定义权限元数据、依赖描述、插件市场信息、侧边栏配置、UI 页面配置等核心类型。
 
 ### `src-tauri/src/services/`
 
