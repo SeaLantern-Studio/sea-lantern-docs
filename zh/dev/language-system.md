@@ -1,4 +1,4 @@
-# SeaLantern 语言系统 / Language System
+# Sea Lantern 语言系统 / Language System
 
 国际化系统支持多语言切换，使用 JSON 文件存储翻译文本。
 
