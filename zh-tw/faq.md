@@ -1,5 +1,17 @@
 # 常見問題
 
+## SeaLantern 無法啟動
+
+### 視窗不出現或空白，只有工作列圖示
+
+可能為代理設定衝突。
+
+請檢查是否有設定 `HTTP_PROXY`、`HTTPS_PROXY`、`ALL_PROXY` 等環境變數。如有設定，請將其清空。
+
+SeaLantern 基於 Tauri 實現，本質上是一個存取 localhost 的瀏覽器，因此涉及網路堆疊的系統設定（如代理伺服器、防火牆設定）均可能影響 SeaLantern 的正常運作。
+
+如果遇到其他類似的 SeaLantern 問題，例如 `Connection Refused`，請優先檢查相關設定。
+
 ## 無法啟動伺服器
 
 ### 提示「Java 未找到」

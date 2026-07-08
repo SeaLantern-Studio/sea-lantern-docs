@@ -1,5 +1,17 @@
 # FAQ
 
+## SeaLantern Won't Start
+
+### Window Doesn't Appear or Is Blank, Only Taskbar Icon Shows
+
+Possible proxy configuration conflict.
+
+Check if you have `HTTP_PROXY`, `HTTPS_PROXY`, or `ALL_PROXY` environment variables set. If so, clear them.
+
+SeaLantern is built on Tauri and essentially acts as a browser accessing localhost. Therefore, system configurations related to the network stack (such as proxy or firewall settings) may affect the normal operation of SeaLantern.
+
+If you encounter other similar issues with SeaLantern, such as `Connection Refused`, please check the relevant configurations first.
+
 ## Server Won't Start
 
 ### "Java not found"
