@@ -22,7 +22,7 @@ Arch Linux 使用者可透過 AUR 安裝（見下載頁 Linux 小節）。
 
 ## 2. 取得伺服端核心
 
-您可以使用 Minecraft 伺服端 JAR 建立新伺服器，也可以直接匯入既有伺服器目錄或啟動腳本。如果您還沒有核心檔案，請參考 [伺服端核心取得](/zh-tw/server-jar) 頁面下載。
+您可以使用 Minecraft 伺服端 JAR 建立新伺服器，也可以直接匯入既有伺服器目錄或啟動腳本。如果您還沒有核心檔案，請參考 [伺服端取得](/zh-tw/server-jar) 頁面下載。
 
 ::: tip 推薦
 對於大多數玩家，推薦使用 [Paper](https://papermc.io/downloads/paper) — 效能優秀、插件生態豐富。

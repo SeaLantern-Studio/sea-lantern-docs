@@ -7,7 +7,7 @@ Sea Lantern 是 Tauri 2 + Vue 3 + Rust 專案。當前倉庫按前端、後端 R
 ```text
 SeaLantern/
 ├── frontend/       # Vue 3 前端、頁面、狀態、語言、主題和 Tauri 呼叫封裝
-├── backend/        # Rust workspace，包含 core crates、Tauri 宿主和 Docker/headless 入口
+├── backend/        # Rust workspace，包含共享 crate、Tauri 宿主和 Docker/headless 入口
 ├── shared/         # 前後端共享靜態資料，如插件權限、Trusted catalog、伺服端分類
 ├── docs/           # 和原始碼強綁定的技術文件、插件 API、CLI、設計記錄
 ├── scripts/        # Tauri 啟動、版本、notice、Docker smoke 等輔助腳本
@@ -94,49 +94,49 @@ frontend/
 
 ```text
 backend/
-├── runtime-core/
-├── event-core/
-├── i18n-core/
-├── server-config-core/
-├── docker-core/
-├── server-local-setup-core/
-├── server-installer-core/
-├── server-startup-scan-core/
-├── java-installer-core/
-├── server-log-core/
-├── server-plugin-core/
-├── plugin-trust-core/
-├── lua-runtime-core/
-├── server-download-links-core/
-├── starter-links-core/
-├── update-core/
+├── runtime/
+├── event/
+├── i18n/
+├── server-config/
+├── docker/
+├── server-local-setup/
+├── server-installer/
+├── server-startup-scan/
+├── java-installer/
+├── server-log/
+├── server-plugin/
+├── plugin-trust/
+├── lua-runtime/
+├── server-download-links/
+├── starter-links/
+├── update/
 ├── tauri-host/
 ├── docker-entry/
 └── vendor/
 ```
 
-### Core crate 分工
+### 共享 crate 分工
 
 | crate | 職責 |
 | --- | --- |
-| `runtime-core` | 執行模式、HTTP/headless、panic report 等執行時工具 |
-| `event-core` | 應用事件和伺服器事件模型 |
-| `i18n-core` | 後端語言資源 |
-| `server-config-core` | 啟動配置、JVM 參數、CPU policy、`server.properties` 規則 |
-| `docker-core` | Docker preview 和 Docker 規則 |
-| `server-local-setup-core` | 本地伺服器接管、啟動模式推斷、本地啟動預覽輔助 |
-| `server-installer-core` | 伺服端安裝和核心識別 |
-| `server-startup-scan-core` | 已有伺服器目錄掃描 |
-| `java-installer-core` | Java 下載和安裝 |
-| `server-log-core` | 伺服器日誌持久化和讀取 |
-| `server-plugin-core` | Minecraft 伺服器插件檔案掃描和管理規則 |
-| `plugin-trust-core` | Sea Lantern 插件權限歸一化、信任和審查規則 |
-| `lua-runtime-core` | Lua 執行時邊界 |
-| `server-download-links-core` | 伺服端下載連結解析 |
-| `starter-links-core` | Starter 連結 |
-| `update-core` | 更新檢查、下載和安裝流程 |
+| `runtime` | 執行模式、HTTP/headless、panic report 等執行時工具 |
+| `event` | 應用事件和伺服器事件模型 |
+| `i18n` | 後端語言資源 |
+| `server-config` | 啟動配置、JVM 參數、CPU policy、`server.properties` 規則 |
+| `docker` | Docker preview 和 Docker 規則 |
+| `server-local-setup` | 本地伺服器接管、啟動模式推斷、本地啟動預覽輔助 |
+| `server-installer` | 伺服端安裝和核心識別 |
+| `server-startup-scan` | 已有伺服器目錄掃描 |
+| `java-installer` | Java 下載和安裝 |
+| `server-log` | 伺服器日誌持久化和讀取 |
+| `server-plugin` | Minecraft 伺服器插件檔案掃描和管理規則 |
+| `plugin-trust` | Sea Lantern 插件權限歸一化、信任和審查規則 |
+| `lua-runtime` | Lua 執行時邊界 |
+| `server-download-links` | 伺服端下載連結解析 |
+| `starter-links` | Starter 連結 |
+| `update` | 更新檢查、下載和安裝流程 |
 
-純規則優先放進對應 `*-core` crate。`tauri-host` 負責命令暴露、服務編排、持久化、執行時狀態和宿主整合。
+純規則優先放進對應共享 crate。`tauri-host` 負責命令暴露、服務編排、持久化、執行時狀態和宿主整合。
 
 ## Tauri 宿主
 
@@ -233,7 +233,7 @@ backend/tauri-host/src/plugins/
 | 類型 | 前端入口 | 後端入口 |
 | --- | --- | --- |
 | Sea Lantern Lua 插件系統 | `frontend/src/api/plugin.ts` | `backend/tauri-host/src/plugins/`、`backend/tauri-host/src/commands/plugins/` |
-| Minecraft 伺服端插件檔案 | `frontend/src/api/mcs_plugins.ts` | `backend/server-plugin-core/`、`backend/tauri-host/src/commands/server/` |
+| Minecraft 伺服端插件檔案 | `frontend/src/api/mcs_plugins.ts` | `backend/server-plugin/`、`backend/tauri-host/src/commands/server/` |
 
 插件 UI snapshot、sidebar、context menu、component mirror、permission log 都是插件可見行為，改動前要確認相容性。
 
@@ -288,13 +288,13 @@ pnpm --dir frontend run dev:http:backend
 | 新增前端頁面 | `frontend/src/router/`、`frontend/src/pages/`、`frontend/src/router/pageMeta.ts` |
 | 新增使用者可見文案 | `frontend/src/language/` |
 | 新增 Tauri 呼叫 | `frontend/src/api/`、`backend/tauri-host/src/runtime/command_catalog.rs`、`backend/tauri-host/src/commands/` |
-| 伺服器建立、匯入、啟動 | `frontend/src/pages/servers/`、`backend/server-config-core/`、`backend/server-local-setup-core/`、`backend/tauri-host/src/services/server/` |
-| Docker 啟動規則 | `backend/docker-core/`、`backend/tauri-host/src/services/server/runtime/docker_itzg/` |
-| 設定編輯 | `frontend/src/features/config-editor/`、`frontend/src/pages/server-instance/config/`、`backend/server-config-core/` |
-| 控制台和日誌 | `frontend/src/stores/consoleStore.ts`、`backend/server-log-core/`、`backend/tauri-host` 日誌讀取邏輯 |
+| 伺服器建立、匯入、啟動 | `frontend/src/pages/servers/`、`backend/server-config/`、`backend/server-local-setup/`、`backend/tauri-host/src/services/server/` |
+| Docker 啟動規則 | `backend/docker/`、`backend/tauri-host/src/services/server/runtime/docker_itzg/` |
+| 設定編輯 | `frontend/src/features/config-editor/`、`frontend/src/pages/server-instance/config/`、`backend/server-config/` |
+| 控制台和日誌 | `frontend/src/stores/consoleStore.ts`、`backend/server-log/`、`backend/tauri-host` 日誌讀取邏輯 |
 | 玩家、白名單、封禁、OP | `frontend/src/api/player.ts`、`frontend/src/pages/server-instance/players/`、`backend/tauri-host/src/commands/server/` |
-| 下載任務、Java、核心下載 | `frontend/src/api/downloader.ts`、`frontend/src/api/java.ts`、`backend/java-installer-core/`、`backend/server-installer-core/` |
-| 更新 | `frontend/src/api/update.ts`、`frontend/src/stores/updateStore.ts`、`backend/update-core/` |
+| 下載任務、Java、核心下載 | `frontend/src/api/downloader.ts`、`frontend/src/api/java.ts`、`backend/java-installer/`、`backend/server-installer/` |
+| 更新 | `frontend/src/api/update.ts`、`frontend/src/stores/updateStore.ts`、`backend/update/` |
 | 認證入口 | `frontend/src/services/auth*.ts`、`frontend/src/stores/auth*.ts`、`frontend/src/router/authRoute.ts` |
 
 ## 檢查命令

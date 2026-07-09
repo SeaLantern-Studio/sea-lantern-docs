@@ -161,7 +161,7 @@ sl.i18n.addTranslations("zh-TW", {
 | --- | --- |
 | 插件 API 文件 | `docs/plugin/*.md` |
 | Lua 執行時 | `backend/tauri-host/src/plugins/runtime/` |
-| 信任規則 | `backend/plugin-trust-core/` |
+| 信任規則 | `backend/plugin-trust/` |
 | 命令實作 | `backend/tauri-host/src/commands/plugins/` |
 | 前端 API | `frontend/src/api/plugin.ts` |
 

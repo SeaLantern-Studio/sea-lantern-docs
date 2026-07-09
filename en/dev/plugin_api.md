@@ -161,7 +161,7 @@ Plugins using these permissions require extra review and user confirmation.
 | --- | --- |
 | Plugin API docs | `docs/plugin/*.md` |
 | Lua runtime | `backend/tauri-host/src/plugins/runtime/` |
-| Trust rules | `backend/plugin-trust-core/` |
+| Trust rules | `backend/plugin-trust/` |
 | Command implementation | `backend/tauri-host/src/commands/plugins/` |
 | Frontend API | `frontend/src/api/plugin.ts` |
 

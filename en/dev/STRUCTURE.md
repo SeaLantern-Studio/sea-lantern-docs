@@ -7,7 +7,7 @@ Sea Lantern is a Tauri 2 + Vue 3 + Rust project. The repository is split into th
 ```text
 SeaLantern/
 ├── frontend/       # Vue 3 frontend, pages, state, language, themes, and Tauri API wrappers
-├── backend/        # Rust workspace with core crates, Tauri host, and Docker/headless entry
+├── backend/        # Rust workspace with shared crates, Tauri host, and Docker/headless entry
 ├── shared/         # Shared static data, such as plugin permissions, trusted catalog, and server taxonomy
 ├── docs/           # Source-bound technical docs, plugin API, CLI, and design notes
 ├── scripts/        # Tauri launcher, version, notice, Docker smoke scripts
@@ -94,49 +94,49 @@ Single-server pages live under `server-instance/`, such as `console/`, `config/`
 
 ```text
 backend/
-├── runtime-core/
-├── event-core/
-├── i18n-core/
-├── server-config-core/
-├── docker-core/
-├── server-local-setup-core/
-├── server-installer-core/
-├── server-startup-scan-core/
-├── java-installer-core/
-├── server-log-core/
-├── server-plugin-core/
-├── plugin-trust-core/
-├── lua-runtime-core/
-├── server-download-links-core/
-├── starter-links-core/
-├── update-core/
+├── runtime/
+├── event/
+├── i18n/
+├── server-config/
+├── docker/
+├── server-local-setup/
+├── server-installer/
+├── server-startup-scan/
+├── java-installer/
+├── server-log/
+├── server-plugin/
+├── plugin-trust/
+├── lua-runtime/
+├── server-download-links/
+├── starter-links/
+├── update/
 ├── tauri-host/
 ├── docker-entry/
 └── vendor/
 ```
 
-### Core Crate Responsibilities
+### Shared Crate Responsibilities
 
 | Crate | Responsibility |
 | --- | --- |
-| `runtime-core` | Runtime mode, HTTP/headless tools, panic reports |
-| `event-core` | App and server event models |
-| `i18n-core` | Backend language resources |
-| `server-config-core` | Startup config, JVM args, CPU policy, `server.properties` rules |
-| `docker-core` | Docker preview and Docker rules |
-| `server-local-setup-core` | Local server adoption, startup mode inference, local startup preview helpers |
-| `server-installer-core` | Server installation and core detection |
-| `server-startup-scan-core` | Existing server directory scanning |
-| `java-installer-core` | Java download and installation |
-| `server-log-core` | Server log persistence and reading |
-| `server-plugin-core` | Minecraft server plugin file scanning and management rules |
-| `plugin-trust-core` | Sea Lantern plugin permission normalization, trust, and review rules |
-| `lua-runtime-core` | Lua runtime boundary |
-| `server-download-links-core` | Server download link parsing |
-| `starter-links-core` | Starter links |
-| `update-core` | Update check, download, and install flow |
+| `runtime` | Runtime mode, HTTP/headless tools, panic reports |
+| `event` | App and server event models |
+| `i18n` | Backend language resources |
+| `server-config` | Startup config, JVM args, CPU policy, `server.properties` rules |
+| `docker` | Docker preview and Docker rules |
+| `server-local-setup` | Local server adoption, startup mode inference, local startup preview helpers |
+| `server-installer` | Server installation and core detection |
+| `server-startup-scan` | Existing server directory scanning |
+| `java-installer` | Java download and installation |
+| `server-log` | Server log persistence and reading |
+| `server-plugin` | Minecraft server plugin file scanning and management rules |
+| `plugin-trust` | Sea Lantern plugin permission normalization, trust, and review rules |
+| `lua-runtime` | Lua runtime boundary |
+| `server-download-links` | Server download link parsing |
+| `starter-links` | Starter links |
+| `update` | Update check, download, and install flow |
 
-Reusable rules should live in the owning `*-core` crate. `tauri-host` should focus on commands, orchestration, persistence, runtime state, and host integration.
+Reusable rules should live in the owning shared crate. `tauri-host` should focus on commands, orchestration, persistence, runtime state, and host integration.
 
 ## Tauri Host
 
@@ -193,7 +193,7 @@ Command names, parameters, return structures, error semantics, and event fields 
 | `online/` | Online services and tunnel |
 | `java_detector/` | Java detection |
 
-Server startup paths must keep local jar, starter, bat, sh, ps1, custom start, and Docker start separate. When preview and execution must match, prefer shared normalized results from core crates.
+Server startup paths must keep local jar, starter, bat, sh, ps1, custom start, and Docker start separate. When preview and execution must match, prefer shared normalized results from shared crates.
 
 ## Plugin System
 
@@ -233,7 +233,7 @@ Keep the two plugin systems separate:
 | Type | Frontend entry | Backend entry |
 | --- | --- | --- |
 | Sea Lantern Lua plugins | `frontend/src/api/plugin.ts` | `backend/tauri-host/src/plugins/`, `backend/tauri-host/src/commands/plugins/` |
-| Minecraft server plugin files | `frontend/src/api/mcs_plugins.ts` | `backend/server-plugin-core/`, `backend/tauri-host/src/commands/server/` |
+| Minecraft server plugin files | `frontend/src/api/mcs_plugins.ts` | `backend/server-plugin/`, `backend/tauri-host/src/commands/server/` |
 
 Plugin UI snapshots, sidebar, context menus, component mirror, and permission logs are plugin-visible behavior. Check compatibility before changing them.
 
@@ -288,13 +288,13 @@ pnpm --dir frontend run dev:http:backend
 | Add a frontend page | `frontend/src/router/`, `frontend/src/pages/`, `frontend/src/router/pageMeta.ts` |
 | Add user-facing text | `frontend/src/language/` |
 | Add a Tauri call | `frontend/src/api/`, `backend/tauri-host/src/runtime/command_catalog.rs`, `backend/tauri-host/src/commands/` |
-| Server create, import, startup | `frontend/src/pages/servers/`, `backend/server-config-core/`, `backend/server-local-setup-core/`, `backend/tauri-host/src/services/server/` |
-| Docker startup rules | `backend/docker-core/`, `backend/tauri-host/src/services/server/runtime/docker_itzg/` |
-| Config editor | `frontend/src/features/config-editor/`, `frontend/src/pages/server-instance/config/`, `backend/server-config-core/` |
-| Console and logs | `frontend/src/stores/consoleStore.ts`, `backend/server-log-core/`, backend host log reading logic |
+| Server create, import, startup | `frontend/src/pages/servers/`, `backend/server-config/`, `backend/server-local-setup/`, `backend/tauri-host/src/services/server/` |
+| Docker startup rules | `backend/docker/`, `backend/tauri-host/src/services/server/runtime/docker_itzg/` |
+| Config editor | `frontend/src/features/config-editor/`, `frontend/src/pages/server-instance/config/`, `backend/server-config/` |
+| Console and logs | `frontend/src/stores/consoleStore.ts`, `backend/server-log/`, backend host log reading logic |
 | Players, whitelist, bans, OP | `frontend/src/api/player.ts`, `frontend/src/pages/server-instance/players/`, `backend/tauri-host/src/commands/server/` |
-| Downloads, Java, server cores | `frontend/src/api/downloader.ts`, `frontend/src/api/java.ts`, `backend/java-installer-core/`, `backend/server-installer-core/` |
-| Updates | `frontend/src/api/update.ts`, `frontend/src/stores/updateStore.ts`, `backend/update-core/` |
+| Downloads, Java, server cores | `frontend/src/api/downloader.ts`, `frontend/src/api/java.ts`, `backend/java-installer/`, `backend/server-installer/` |
+| Updates | `frontend/src/api/update.ts`, `frontend/src/stores/updateStore.ts`, `backend/update/` |
 | Auth entry | `frontend/src/services/auth*.ts`, `frontend/src/stores/auth*.ts`, `frontend/src/router/authRoute.ts` |
 
 ## Check Commands

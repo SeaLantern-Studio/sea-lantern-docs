@@ -54,8 +54,8 @@ function nav(): DefaultTheme.NavItem[] {
     { text: '下載', link: '/zh-tw/download' },
     { text: '快速開始', link: '/zh-tw/getting-started' },
     { text: '功能總覽', link: '/zh-tw/features' },
-    { text: '更新日誌', link: '/zh-tw/changelog' },
     { text: '貢獻指南', link: '/zh-tw/contributing' },
+    { text: '隱私與服務協議', link: '/zh-tw/privacy' },
   ]
 }
 
@@ -68,17 +68,10 @@ function sidebar(): DefaultTheme.Sidebar {
         items: [
           { text: '下載安裝', link: '/zh-tw/download' },
           { text: '快速開始', link: '/zh-tw/getting-started' },
-          { text: '伺服端核心取得', link: '/zh-tw/server-jar' },
+          { text: '伺服端取得', link: '/zh-tw/server-jar' },
           { text: '使用教學', link: '/zh-tw/tutorial' },
           { text: '功能總覽', link: '/zh-tw/features' },
           { text: '常見問題', link: '/zh-tw/faq' },
-        ],
-      },
-      {
-        text: '專案資訊',
-        items: [
-          { text: '更新日誌', link: '/zh-tw/changelog' },
-          { text: '專案結構', link: '/zh-tw/structure' },
         ],
       },
       {
@@ -96,6 +89,13 @@ function sidebar(): DefaultTheme.Sidebar {
               { text: '插件 API', link: '/zh-tw/dev/plugin_api' },
             ],
           },
+        ],
+      },
+      {
+        text: '關於軟體',
+        items: [
+          { text: '隱私與服務協議', link: '/zh-tw/privacy' },
+          { text: '授權條款', link: '/zh-tw/license' },
         ],
       },
     ],

@@ -4,37 +4,32 @@ import { VERSION, RELEASE_BASE, ASSET_VERSION, RPM_ASSET_VERSION, ARCH_PKG_ASSET
 
 # 下载安装
 
-按你的系统选择对应安装包下载并安装。  
-- 建议优先使用安装包格式（Windows 选 EXE，macOS 选 DMG）。
-- 较为特殊的是Docker
-  1. 此版本无头，这代表着你可以在服务器运行
-  2. 此版本跨平台，可以在支持docker的所有平台运行
-- 如需先看改动内容，点击上方版本号查看更新日志。
-
 ## 最新版本
 
 当前最新版本：
-<a :href="`/zh/changelog#v${VERSION.replace(/\./g, '-')}`"><strong>v{{ VERSION }}</strong></a>
+<strong>v{{ VERSION }}</strong>
 
-::: tip 架构支持更新（v1.0.0+）
-Windows 和 Linux 现已提供 ARM64 安装包，可按你的设备架构选择下载。
-:::
+按你的系统选择对应安装包下载并安装。  
+- 建议优先使用安装包格式（Windows 选 exe，macOS 选 dmg）
+- 较为特殊的是Docker
+  - 此版本无头，可以在服务器运行
+  - 此版本跨平台，可以在支持docker的所有平台运行
 
 ## Windows
 
 | 格式 | 说明 |
 |------|------|
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64-setup.exe`">.exe 安装包</a> | 推荐，双击安装 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64_zh-CN.msi`">.msi 安装包</a> | Windows Installer 格式 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64-setup.exe`">.exe 安装包 (ARM64)</a> | 适用于 Windows on ARM |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64_zh-CN.msi`">.msi 安装包 (ARM64)</a> | Windows Installer (ARM64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64-setup.exe`">exe 安装包</a> | 推荐，双击安装 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64_zh-CN.msi`">msi 安装包</a> | Windows Installer 格式 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64-setup.exe`">exe 安装包 (ARM64)</a> | 适用于 Windows on ARM |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64_zh-CN.msi`">msi 安装包 (ARM64)</a> | Windows Installer (ARM64) |
 
 ## macOS
 
 | 格式 | 说明 |
 |------|------|
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_aarch64.dmg`">DMG (Apple Silicon)</a> | M1 / M2 / M3 / M4 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64.dmg`">DMG (Intel)</a> | x64 架构 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_aarch64.dmg`">dmg (Apple Silicon)</a> | M1 / M2 / M3 / M4 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64.dmg`">dmg (Intel)</a> | x64 架构 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_aarch64.app.tar.gz`">app.tar.gz (Apple Silicon)</a> | 便携压缩包 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_x64.app.tar.gz`">app.tar.gz (Intel)</a> | 便携压缩包 |
 
@@ -58,10 +53,10 @@ xattr -dr com.apple.quarantine ./Sea\ Lantern.app
 
 | 格式 | 说明 |
 |------|------|
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_amd64.deb`">.deb</a> | Debian / Ubuntu |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64.deb`">.deb (ARM64)</a> | Debian / Ubuntu ARM64 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern-${RPM_ASSET_VERSION}.x86_64.rpm`">.rpm</a> | Fedora / RHEL (x86_64) |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern-${RPM_ASSET_VERSION}.aarch64.rpm`">.rpm (ARM64)</a> | Fedora / RHEL (aarch64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_amd64.deb`">deb</a> | Debian / Ubuntu |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64.deb`">deb (ARM64)</a> | Debian / Ubuntu ARM64 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern-${RPM_ASSET_VERSION}.x86_64.rpm`">rpm</a> | Fedora / RHEL (x86_64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern-${RPM_ASSET_VERSION}.aarch64.rpm`">rpm (ARM64)</a> | Fedora / RHEL (aarch64) |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_amd64.AppImage`">AppImage</a> | 通用格式 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_aarch64.AppImage`">AppImage (ARM64)</a> | 通用格式 (ARM64) |
 | <a :href="`${RELEASE_BASE}/sealantern-${ARCH_PKG_ASSET_VERSION}-x86_64.pkg.tar.zst`">pkg.tar.zst</a> | Arch Linux 可安装包 (x86_64) |
@@ -69,7 +64,7 @@ xattr -dr com.apple.quarantine ./Sea\ Lantern.app
 Arch Linux 用户可通过 AUR 安装，例如：
 
 ```bash
-yay -S sealantern
+sudo pacman -S sealantern
 ```
 
 ### Ubuntu PPA（社区维护）
@@ -82,19 +77,16 @@ sudo apt update
 sudo apt install sea-lantern-ppa-updater
 ```
 
-支持 Ubuntu 20.04 LTS、22.04 LTS 和 24.04 LTS。
-
-该 PPA 为社区维护渠道，不属于官方发布渠道；如遇问题请改用上方 .deb 安装包。
+该 PPA 为社区维护渠道，不属于官方发布渠道；如遇问题请改用上方 deb 安装包。
 
 ## Docker
 
-1. 安装docker详见部分[安装docker](https://www.bilibili.com/video/BV1vm421T7Kw/?share_source=copy_web&vd_source=67ab86499fd78344263cc23e969c3fe4)
-2. 拉取最新的海晶灯docker镜像
+- 安装docker。详见 [安装docker](https://www.bilibili.com/video/BV1vm421T7Kw/?share_source=copy_web&vd_source=67ab86499fd78344263cc23e969c3fe4)
+- 拉取最新的海晶灯docker镜像
   ```bash
   docker pull penetr4t10n/sealantern:latest
   ```
-3. 运行最新的海晶灯录像
-  tip:docker内的网络环境是隔离的所以要把web端口和服务器端口暴露
+- 运行最新的海晶灯录像
   ```
   docker run -d \
     --name sealantern \
@@ -102,6 +94,9 @@ sudo apt install sea-lantern-ppa-updater
     -p 25565:25565/tcp \
     penetr4t10n/sealantern:latest
   ```
+:::tip 注意
+docker内的网络环境是隔离的，因此需要暴露web端口和服务器端口
+:::
 
 ## 系统要求
 

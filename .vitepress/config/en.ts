@@ -35,8 +35,8 @@ function nav(): DefaultTheme.NavItem[] {
     { text: 'Download', link: '/en/download' },
     { text: 'Getting Started', link: '/en/getting-started' },
     { text: 'Features', link: '/en/features' },
-    { text: 'Changelog', link: '/en/changelog' },
     { text: 'Contributing', link: '/en/contributing' },
+    { text: 'Privacy & Terms', link: '/en/privacy' },
   ]
 }
 
@@ -56,13 +56,6 @@ function sidebar(): DefaultTheme.Sidebar {
         ],
       },
       {
-        text: 'Project Info',
-        items: [
-          { text: 'Changelog', link: '/en/changelog' },
-          { text: 'Project Structure', link: '/en/structure' },
-        ],
-      },
-      {
         text: 'Development',
         items: [
           { text: 'Contributors', link: '/en/contributor' },
@@ -77,6 +70,13 @@ function sidebar(): DefaultTheme.Sidebar {
               { text: 'Plugin API', link: '/en/dev/plugin_api' },
             ],
           },
+        ],
+      },
+      {
+        text: 'About Software',
+        items: [
+          { text: 'Privacy & Terms', link: '/en/privacy' },
+          { text: 'License', link: '/en/license' },
         ],
       },
     ],

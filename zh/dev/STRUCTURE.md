@@ -7,7 +7,7 @@ Sea Lantern 是 Tauri 2 + Vue 3 + Rust 项目。当前仓库按前端、后端 R
 ```text
 SeaLantern/
 ├── frontend/       # Vue 3 前端、页面、状态、语言、主题和 Tauri 调用封装
-├── backend/        # Rust workspace，包含 core crates、Tauri 宿主和 Docker/headless 入口
+├── backend/        # Rust workspace，包含共享 crate、Tauri 宿主和 Docker/headless 入口
 ├── shared/         # 前后端共享静态数据，如插件权限、Trusted catalog、服务端分类
 ├── docs/           # 和源码强绑定的技术文档、插件 API、CLI、设计记录
 ├── scripts/        # Tauri 启动、版本、notice、Docker smoke 等辅助脚本
@@ -94,49 +94,49 @@ frontend/
 
 ```text
 backend/
-├── runtime-core/
-├── event-core/
-├── i18n-core/
-├── server-config-core/
-├── docker-core/
-├── server-local-setup-core/
-├── server-installer-core/
-├── server-startup-scan-core/
-├── java-installer-core/
-├── server-log-core/
-├── server-plugin-core/
-├── plugin-trust-core/
-├── lua-runtime-core/
-├── server-download-links-core/
-├── starter-links-core/
-├── update-core/
+├── runtime/
+├── event/
+├── i18n/
+├── server-config/
+├── docker/
+├── server-local-setup/
+├── server-installer/
+├── server-startup-scan/
+├── java-installer/
+├── server-log/
+├── server-plugin/
+├── plugin-trust/
+├── lua-runtime/
+├── server-download-links/
+├── starter-links/
+├── update/
 ├── tauri-host/
 ├── docker-entry/
 └── vendor/
 ```
 
-### Core crate 分工
+### 共享 crate 分工
 
 | crate | 职责 |
 | --- | --- |
-| `runtime-core` | 运行模式、HTTP/headless、panic report 等运行时工具 |
-| `event-core` | 应用事件和服务器事件模型 |
-| `i18n-core` | 后端语言资源 |
-| `server-config-core` | 启动配置、JVM 参数、CPU policy、`server.properties` 规则 |
-| `docker-core` | Docker preview 和 Docker 规则 |
-| `server-local-setup-core` | 本地服务器接管、启动模式推断、本地启动预览辅助 |
-| `server-installer-core` | 服务端安装和核心识别 |
-| `server-startup-scan-core` | 已有服务器目录扫描 |
-| `java-installer-core` | Java 下载和安装 |
-| `server-log-core` | 服务器日志持久化和读取 |
-| `server-plugin-core` | Minecraft 服务端插件文件扫描和管理规则 |
-| `plugin-trust-core` | Sea Lantern 插件权限归一化、信任和审查规则 |
-| `lua-runtime-core` | Lua 运行时边界 |
-| `server-download-links-core` | 服务端下载链接解析 |
-| `starter-links-core` | Starter 链接 |
-| `update-core` | 更新检查、下载和安装流程 |
+| `runtime` | 运行模式、HTTP/headless、panic report 等运行时工具 |
+| `event` | 应用事件和服务器事件模型 |
+| `i18n` | 后端语言资源 |
+| `server-config` | 启动配置、JVM 参数、CPU policy、`server.properties` 规则 |
+| `docker` | Docker preview 和 Docker 规则 |
+| `server-local-setup` | 本地服务器接管、启动模式推断、本地启动预览辅助 |
+| `server-installer` | 服务端安装和核心识别 |
+| `server-startup-scan` | 已有服务器目录扫描 |
+| `java-installer` | Java 下载和安装 |
+| `server-log` | 服务器日志持久化和读取 |
+| `server-plugin` | Minecraft 服务端插件文件扫描和管理规则 |
+| `plugin-trust` | Sea Lantern 插件权限归一化、信任和审查规则 |
+| `lua-runtime` | Lua 运行时边界 |
+| `server-download-links` | 服务端下载链接解析 |
+| `starter-links` | Starter 链接 |
+| `update` | 更新检查、下载和安装流程 |
 
-纯规则优先放进对应 `*-core` crate。`tauri-host` 负责命令暴露、服务编排、持久化、运行时状态和宿主集成。
+纯规则优先放进对应共享 crate。`tauri-host` 负责命令暴露、服务编排、持久化、运行时状态和宿主集成。
 
 ## Tauri 宿主
 
@@ -233,7 +233,7 @@ backend/tauri-host/src/plugins/
 | 类型 | 前端入口 | 后端入口 |
 | --- | --- | --- |
 | Sea Lantern Lua 插件系统 | `frontend/src/api/plugin.ts` | `backend/tauri-host/src/plugins/`、`backend/tauri-host/src/commands/plugins/` |
-| Minecraft 服务端插件文件 | `frontend/src/api/mcs_plugins.ts` | `backend/server-plugin-core/`、`backend/tauri-host/src/commands/server/` |
+| Minecraft 服务端插件文件 | `frontend/src/api/mcs_plugins.ts` | `backend/server-plugin/`、`backend/tauri-host/src/commands/server/` |
 
 插件 UI snapshot、sidebar、context menu、component mirror、permission log 都是插件可见行为，改动前要确认兼容性。
 

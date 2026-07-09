@@ -54,9 +54,8 @@ function nav(): DefaultTheme.NavItem[] {
     { text: '下载', link: '/zh/download' },
     { text: '快速开始', link: '/zh/getting-started' },
     { text: '功能总览', link: '/zh/features' },
-    { text: '更新日志', link: '/zh/changelog' },
     { text: '贡献指南', link: '/zh/contributing' },
-    { text: '隐私与服务协议', link: '/zh/privacy'},
+    { text: '隐私与服务协议', link: '/zh/privacy' },
   ]
 }
 
@@ -73,14 +72,6 @@ function sidebar(): DefaultTheme.Sidebar {
           { text: '使用教程', link: '/zh/tutorial' },
           { text: '功能总览', link: '/zh/features' },
           { text: '常见问题', link: '/zh/faq' },
-          ],
-      },
-      {
-        text: '项目信息',
-        items: [
-          { text: '更新日志', link: '/zh/changelog' },
-          { text: '项目结构', link: '/zh/structure' },
-          { text: '隐私与服务协议', link: '/zh/privacy'},
         ],
       },
       {
@@ -91,13 +82,20 @@ function sidebar(): DefaultTheme.Sidebar {
             text: '开发者文档',
             collapsed: true,
             items: [
-          { text:'环境配置',link:'/zh/dev/environment'},
-          { text:'语言系统',link:'/zh/dev/language-system'},
-          { text:'贡献指南',link:'/zh/dev/CONTRIBUTING'},
-          { text:'项目结构',link:'/zh/dev/STRUCTURE'},
-          { text:'插件API',link:'/zh/dev/plugin_api'},
-      ]
-    }
+              { text: '环境配置', link: '/zh/dev/environment' },
+              { text: '语言系统', link: '/zh/dev/language-system' },
+              { text: '贡献指南', link: '/zh/dev/CONTRIBUTING' },
+              { text: '项目结构', link: '/zh/dev/STRUCTURE' },
+              { text: '插件API', link: '/zh/dev/plugin_api' },
+            ],
+          },
+        ],
+      },
+      {
+        text: '关于软件',
+        items: [
+          { text: '隐私与服务协议', link: '/zh/privacy' },
+          { text: '许可证', link: '/zh/license' },
         ],
       },
     ],
