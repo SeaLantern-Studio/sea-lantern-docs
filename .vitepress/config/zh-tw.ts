@@ -83,11 +83,19 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: '開發者',
-        collapsed: true,
         items: [
-          { text: '環境配置', link: '/zh-tw/dev/environment' },
-          { text: '貢獻指南', link: '/zh-tw/contributing' },
           { text: '貢獻者名單', link: '/zh-tw/contributor' },
+          {
+            text: '開發者文檔',
+            collapsed: true,
+            items: [
+              { text: '環境配置', link: '/zh-tw/dev/environment' },
+              { text: '語言系統', link: '/zh-tw/dev/language-system' },
+              { text: '貢獻指南', link: '/zh-tw/dev/CONTRIBUTING' },
+              { text: '專案結構', link: '/zh-tw/dev/STRUCTURE' },
+              { text: '插件 API', link: '/zh-tw/dev/plugin_api' },
+            ],
+          },
         ],
       },
     ],

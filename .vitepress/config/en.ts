@@ -64,11 +64,19 @@ function sidebar(): DefaultTheme.Sidebar {
       },
       {
         text: 'Development',
-        collapsed: true,
         items: [
-          { text: 'Environment Setup', link: '/en/dev/environment' },
-          { text: 'Contributing', link: '/en/contributing' },
           { text: 'Contributors', link: '/en/contributor' },
+          {
+            text: 'Developer Docs',
+            collapsed: true,
+            items: [
+              { text: 'Environment Setup', link: '/en/dev/environment' },
+              { text: 'Language System', link: '/en/dev/language-system' },
+              { text: 'Contributing', link: '/en/dev/CONTRIBUTING' },
+              { text: 'Project Structure', link: '/en/dev/STRUCTURE' },
+              { text: 'Plugin API', link: '/en/dev/plugin_api' },
+            ],
+          },
         ],
       },
     ],
