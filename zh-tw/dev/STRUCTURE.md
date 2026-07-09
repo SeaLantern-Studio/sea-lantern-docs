@@ -266,19 +266,19 @@ backend/tauri-host/src/plugins/
 預設桌面開發路徑是：
 
 ```bash
-pnpm --dir frontend run tauri:dev
+pnpm tauri:dev
 ```
 
 只啟動前端：
 
 ```bash
-pnpm --dir frontend run dev
+pnpm dev
 ```
 
 只啟動 HTTP / Docker 後端：
 
 ```bash
-pnpm --dir frontend run dev:http:backend
+pnpm dev:http
 ```
 
 ## 常見改動路線
@@ -302,9 +302,9 @@ pnpm --dir frontend run dev:http:backend
 前端：
 
 ```bash
-pnpm --dir frontend run lint
-pnpm --dir frontend run build:check
-pnpm --dir frontend run fmt:check
+pnpm lint
+pnpm build:check
+pnpm fmt:check
 ```
 
 後端：
@@ -318,6 +318,6 @@ cargo clippy --workspace -- -D warnings
 語言資源：
 
 ```bash
-pnpm --dir frontend run i18n:check
-pnpm --dir frontend run i18n:sync
+pnpm i18n:check
+pnpm i18n:sync
 ```

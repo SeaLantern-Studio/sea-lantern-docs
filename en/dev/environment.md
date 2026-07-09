@@ -175,11 +175,11 @@ Then clone the project and install dependencies:
 git clone https://github.com/SeaLantern-Studio/SeaLantern.git
 cd SeaLantern
 git switch beta
-pnpm --dir frontend install
+pnpm install
 ```
 
 Common start command:
 
 ```bash
-pnpm --dir frontend run tauri:dev
+pnpm tauri:dev
 ```

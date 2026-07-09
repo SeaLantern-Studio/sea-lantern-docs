@@ -54,7 +54,7 @@ function nav(): DefaultTheme.NavItem[] {
     { text: '下載', link: '/zh-tw/download' },
     { text: '快速開始', link: '/zh-tw/getting-started' },
     { text: '功能總覽', link: '/zh-tw/features' },
-    { text: '貢獻指南', link: '/zh-tw/contributing' },
+    { text: '貢獻指南', link: '/zh-tw/dev/CONTRIBUTING' },
     { text: '隱私與服務協議', link: '/zh-tw/privacy' },
   ]
 }

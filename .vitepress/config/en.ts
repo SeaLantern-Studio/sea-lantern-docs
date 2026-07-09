@@ -35,7 +35,7 @@ function nav(): DefaultTheme.NavItem[] {
     { text: 'Download', link: '/en/download' },
     { text: 'Getting Started', link: '/en/getting-started' },
     { text: 'Features', link: '/en/features' },
-    { text: 'Contributing', link: '/en/contributing' },
+    { text: 'Contributing', link: '/en/dev/CONTRIBUTING' },
     { text: 'Privacy & Terms', link: '/en/privacy' },
   ]
 }

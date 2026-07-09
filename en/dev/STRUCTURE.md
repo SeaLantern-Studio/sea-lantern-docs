@@ -266,19 +266,19 @@ General user docs, tutorials, and contribution guides should live on the docs si
 Default desktop development command:
 
 ```bash
-pnpm --dir frontend run tauri:dev
+pnpm tauri:dev
 ```
 
 Frontend only:
 
 ```bash
-pnpm --dir frontend run dev
+pnpm dev
 ```
 
 HTTP / Docker backend only:
 
 ```bash
-pnpm --dir frontend run dev:http:backend
+pnpm dev:http
 ```
 
 ## Common Change Routes
@@ -302,9 +302,9 @@ pnpm --dir frontend run dev:http:backend
 Frontend:
 
 ```bash
-pnpm --dir frontend run lint
-pnpm --dir frontend run build:check
-pnpm --dir frontend run fmt:check
+pnpm lint
+pnpm build:check
+pnpm fmt:check
 ```
 
 Backend:
@@ -318,6 +318,6 @@ cargo clippy --workspace -- -D warnings
 Language resources:
 
 ```bash
-pnpm --dir frontend run i18n:check
-pnpm --dir frontend run i18n:sync
+pnpm i18n:check
+pnpm i18n:sync
 ```

@@ -175,11 +175,11 @@ git --version
 git clone https://github.com/SeaLantern-Studio/SeaLantern.git
 cd SeaLantern
 git switch beta
-pnpm --dir frontend install
+pnpm install
 ```
 
 常用啟動命令：
 
 ```bash
-pnpm --dir frontend run tauri:dev
+pnpm tauri:dev
 ```

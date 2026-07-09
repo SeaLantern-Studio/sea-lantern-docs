@@ -99,10 +99,10 @@
 4. **格式化和檢查**
 
    ```bash
-   pnpm --dir frontend run fmt
-   pnpm --dir frontend run fmt:check
-   pnpm --dir frontend run lint
-   pnpm --dir frontend run lint:fix
+   pnpm fmt
+   pnpm fmt:check
+   pnpm lint
+   pnpm lint:fix
    ```
 
 5. **型別引用**
@@ -157,9 +157,9 @@ chore: 調整建置或目錄結構
    ```bash
    cargo fmt --all -- --check
    cargo clippy --workspace -- -D warnings
-   pnpm --dir frontend run fmt:check
-   pnpm --dir frontend run lint
-   pnpm --dir frontend run build
+   pnpm fmt:check
+   pnpm lint
+   pnpm build
 
    git add .
    git commit -m "feat(scope): 你的功能描述"
@@ -199,14 +199,14 @@ chore: 調整建置或目錄結構
 ### 如何執行開發環境？
 
 ```bash
-pnpm --dir frontend install
-pnpm --dir frontend run tauri:dev
+pnpm install
+pnpm tauri:dev
 ```
 
 ### 如何建置發行版本？
 
 ```bash
-pnpm --dir frontend run tauri:build
+pnpm tauri:build
 ```
 
 但我們不推薦把本地建置用作正式 Release 產物。

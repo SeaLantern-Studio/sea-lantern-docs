@@ -99,10 +99,10 @@ Development team invitations consider:
 4. **Formatting and checks**
 
    ```bash
-   pnpm --dir frontend run fmt
-   pnpm --dir frontend run fmt:check
-   pnpm --dir frontend run lint
-   pnpm --dir frontend run lint:fix
+   pnpm fmt
+   pnpm fmt:check
+   pnpm lint
+   pnpm lint:fix
    ```
 
 5. **Typed refs**
@@ -157,9 +157,9 @@ Run the necessary checks before committing. CI will continue to check quality on
    ```bash
    cargo fmt --all -- --check
    cargo clippy --workspace -- -D warnings
-   pnpm --dir frontend run fmt:check
-   pnpm --dir frontend run lint
-   pnpm --dir frontend run build
+   pnpm fmt:check
+   pnpm lint
+   pnpm build
 
    git add .
    git commit -m "feat(scope): your change"
@@ -199,14 +199,14 @@ Run the necessary checks before committing. CI will continue to check quality on
 ### How do I run the development environment?
 
 ```bash
-pnpm --dir frontend install
-pnpm --dir frontend run tauri:dev
+pnpm install
+pnpm tauri:dev
 ```
 
 ### How do I build a release version?
 
 ```bash
-pnpm --dir frontend run tauri:build
+pnpm tauri:build
 ```
 
 Do not use local builds as official release artifacts.
