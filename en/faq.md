@@ -124,9 +124,9 @@ If you need a visual guide, see this video: [VxKex Extended Kernel Installation 
 Due to ArchLinux's rolling release system, some dependency libraries may receive major updates, which can cause Sea Lantern to stop working. Therefore, if your file system is BTRFS, it is recommended to use the snapshot feature to back up your system before updating, so you can quickly roll back if issues arise.
 
 1. **Installing Sea Lantern**
-- Install using an AUR helper (like yay):
+- Install using an AUR helper (like paru):
 ```bash
-yay -S sealantern
+paru -S sealantern
 ```
 ***Note: It is `sealantern`, not `sea-lantern`***
 - Once installed, you can find Sea Lantern in the application menu and launch it, or use the command line:
@@ -137,11 +137,11 @@ sea-lantern
 2. **Updating Sea Lantern**
 - The AUR package updates along with the official version. Use your AUR helper to check for updates:
 ```bash
-yay -Syu sealantern
+paru -Syu sealantern
 ```
 - If issues occur after an update, you can roll back to a previous version:
 ```bash
-yay -S sealantern-<previous_version>
+paru -S sealantern-<previous_version>
 ```
 
 3. **Steps to Resolve Update Failures**
@@ -152,12 +152,12 @@ yay -S sealantern-<previous_version>
 
 If you find that running the update command still results in the old version, try updating the development package:
 ```bash
-yay -Syu --devel sealantern
+paru -Syu --devel sealantern
 ```
 
 If that still doesn't work, try clearing the cache:
 ```bash
-yay -Sc sealantern
+paru -Sc sealantern
 ```
 
 ## Other Questions

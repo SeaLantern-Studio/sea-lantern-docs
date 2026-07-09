@@ -64,7 +64,7 @@ xattr -dr com.apple.quarantine ./Sea\ Lantern.app
 Arch Linux 使用者可透過 AUR 安裝，例如：
 
 ```bash
-sudo pacman -S sealantern
+paru -S sealantern
 ```
 
 ### Ubuntu PPA（社群維護）

@@ -124,9 +124,9 @@ Sea Lantern 基于 Tauri 2，要求 Windows 10（版本 1909 及以上）或 Win
 由于 ArchLinux 的滚动更新机制，某些依赖库可能会发生重大更新，导致 Sea Lantern 无法正常运行。所以如果你的文件系统是BTRFS,建议在更新前使用快照功能备份系统，以便在出现问题时快速回滚到之前的状态。
 
 1. **安装 Sea Lantern**
-   - 使用 AUR 包管理器（如 yay）安装：
+   - 使用 AUR 包管理器（如 paru）安装：
      ```bash
-     yay -S sealantern
+     paru -S sealantern
      ```
      ***注意这里不是 sea-lantern，而是 sealantern***
    - 安装完成后即可在应用菜单中找到 Sea Lantern 并启动，或者是使用命令行：
@@ -137,11 +137,11 @@ Sea Lantern 基于 Tauri 2，要求 Windows 10（版本 1909 及以上）或 Win
 2. **更新 Sea Lantern**
    - AUR 包会随着官方版本更新而更新，使用 AUR 包管理器检查更新：
      ```bash
-     yay -Syu sealantern
+     paru -Syu sealantern
      ```
    - 如果更新后出现问题，可以回滚到之前的版本：
      ```bash
-     yay -S sealantern-<previous_version>
+     paru -S sealantern-<previous_version>
      ```
 
 3. **更新失败的解决步骤**
@@ -152,12 +152,12 @@ Sea Lantern 基于 Tauri 2，要求 Windows 10（版本 1909 及以上）或 Win
 
    如果是发现使用命令行进行更新的时候发现依旧是旧版本，可以尝试使用命令更新库：
    ```bash
-   yay -Syu --devel sealantern
+   paru -Syu --devel sealantern
    ```
 
    如果还是不行可以尝试删除缓存：
    ```bash
-   yay -Sc sealantern
+   paru -Sc sealantern
    ```
 
 ## 其他常见问题

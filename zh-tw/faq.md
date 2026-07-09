@@ -121,9 +121,9 @@ ArchLinux 欄目可透過 AUR 安裝 Sea Lantern，安裝程式會自動處理�
 ### Arch 上的更新問題
 由於 ArchLinux 的滾動更新機制，某些依賴庫可能會進行重大更新，導致 Sea Lantern 無法正常運行。因此，若您使用的檔案系統為 BTRFS，建議在更新前使用快照功能備份系統，以便在出現問題時快速回滾至先前狀態。
 1. **安裝 Sea Lantern**
-- 使用 AUR 包管理器（如 yay）安裝：
+- 使用 AUR 包管理器（如 paru）安裝：
 ```bash
-yay -S sealantern
+paru -S sealantern
 ```
 ***注意這裡不是 sea-lantern，而是 sealantern***
 - 安裝完成後即可在應用程式選單中找到 Sea Lantern 並啟動，或是使用指令列：
@@ -134,11 +134,11 @@ sea-lantern
 2. **更新 Sea Lantern**
 - AUR 包會隨著官方版本更新而更新，使用 AUR 包管理器檢查更新：
 ```bash
-yay -Syu sealantern
+paru -Syu sealantern
 ```
 - 如果更新後出現問題，可以回滾到之前的版本：
 ```bash
-yay -S sealantern-<previous_version>
+paru -S sealantern-<previous_version>
 ```
 
 3. **更新失敗的解決步驟**
@@ -148,12 +148,12 @@ yay -S sealantern-<previous_version>
 - 如果你有相關能力，可以嘗試自行修復問題並提交 Pull Request，協助社群更快地解決問題。
 如果在使用指令列進行更新時發現仍是舊版本，可以嘗試使用指令更新套件：
 ```bash
-yay -Syu --devel sealantern
+paru -Syu --devel sealantern
 ``````
 
 如果還是不行，可以嘗試刪除快取：
 ```bash
-yay -Sc sealantern
+paru -Sc sealantern
 ``````
 
 ## 其他常見問題

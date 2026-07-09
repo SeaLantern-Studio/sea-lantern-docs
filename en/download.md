@@ -64,7 +64,7 @@ If it is still blocked, open “System Settings -> Privacy & Security” and cli
 Arch Linux users can install via AUR, for example:
 
 ```bash
-sudo pacman -S sealantern
+paru -S sealantern
 ```
 
 ### Ubuntu PPA (community-maintained)
