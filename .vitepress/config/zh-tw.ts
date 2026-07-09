@@ -85,6 +85,7 @@ function sidebar(): DefaultTheme.Sidebar {
         text: '開發者',
         collapsed: true,
         items: [
+          { text: '環境配置', link: '/zh-tw/dev/environment' },
           { text: '貢獻指南', link: '/zh-tw/contributing' },
           { text: '貢獻者名單', link: '/zh-tw/contributor' },
         ],

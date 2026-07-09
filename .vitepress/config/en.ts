@@ -66,6 +66,7 @@ function sidebar(): DefaultTheme.Sidebar {
         text: 'Development',
         collapsed: true,
         items: [
+          { text: 'Environment Setup', link: '/en/dev/environment' },
           { text: 'Contributing', link: '/en/contributing' },
           { text: 'Contributors', link: '/en/contributor' },
         ],
