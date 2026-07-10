@@ -38,7 +38,7 @@ Development team invitations consider:
 | --- | --- |
 | Node.js | 22.12.0+ |
 | Rust | stable |
-| pnpm | 11.5.3 |
+| pnpm | 11.11.0 |
 
 ## Code Style
 

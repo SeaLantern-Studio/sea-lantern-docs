@@ -14,7 +14,7 @@ Install them in the order below.
 | Tool | Recommended version |
 | --- | --- |
 | Node.js | 22.12.0+ |
-| pnpm | 11.5.3 |
+| pnpm | 11.11.0 |
 | Rust | stable |
 | Git | latest |
 
@@ -43,7 +43,7 @@ Use Corepack to pin the pnpm version required by the project:
 ```bash
 npm install --global corepack@latest
 corepack enable pnpm
-corepack prepare pnpm@11.5.3 --activate
+corepack prepare pnpm@11.11.0 --activate
 pnpm -v
 ```
 

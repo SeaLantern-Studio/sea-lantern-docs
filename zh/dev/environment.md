@@ -14,7 +14,7 @@ Sea Lantern 是 Tauri 2 + Vue 3 + Rust 项目。开发环境需要准备好：
 | 工具 | 建议版本 |
 | --- | --- |
 | Node.js | 22.12.0+ |
-| pnpm | 11.5.3 |
+| pnpm | 11.11.0 |
 | Rust | stable |
 | Git | latest |
 
@@ -43,7 +43,7 @@ Sea Lantern 使用 pnpm。pnpm 官方文档说明，pnpm 11 需要 Node.js 22 �
 ```bash
 npm install --global corepack@latest
 corepack enable pnpm
-corepack prepare pnpm@11.5.3 --activate
+corepack prepare pnpm@11.11.0 --activate
 pnpm -v
 ```
 
