@@ -23,6 +23,12 @@ If you're getting started, begin with "Server Creation", "Java Management", and 
 - OP permission management
 - Common actions like kicking players
 
+## P2P Multiplayer (Beta)
+
+- Create a P2P multiplayer tunnel without a public IP
+- Generate a connection ticket for players using the companion client
+- P2P reliability depends on network conditions; use FRP when a more stable connection is needed
+
 ## Plugin System
 
 Lua script-based plugin extension mechanism:

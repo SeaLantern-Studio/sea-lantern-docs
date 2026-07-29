@@ -24,7 +24,7 @@
 
 ## 本地开发
 
-需要 [Node.js](https://nodejs.org) 20+：
+推荐使用 [Node.js](https://nodejs.org) 24 LTS：
 
 ```bash
 corepack enable          # 启用 pnpm

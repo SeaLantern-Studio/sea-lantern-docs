@@ -14,7 +14,7 @@ export const zh = defineConfig({
     },
 
     footer: {
-      message: '基于 GPL-3.0 许可发布',
+      message: 'Sea Lantern 基于 AGPL-3.0 许可发布',
       copyright: '© 2024-present SeaLantern Studio',
     },
 
@@ -83,7 +83,6 @@ function sidebar(): DefaultTheme.Sidebar {
             collapsed: true,
             items: [
               { text: '环境配置', link: '/zh/dev/environment' },
-              { text: '语言系统', link: '/zh/dev/language-system' },
               { text: '贡献指南', link: '/zh/dev/CONTRIBUTING' },
               { text: '项目结构', link: '/zh/dev/STRUCTURE' },
               { text: '插件API', link: '/zh/dev/plugin_api' },

@@ -13,8 +13,8 @@ Install them in the order below.
 
 | Tool | Recommended version |
 | --- | --- |
-| Node.js | 22.12.0+ |
-| pnpm | 11.11.0 |
+| Node.js | 24 LTS (minimum 20.19.0) |
+| pnpm | 9.15.9 |
 | Rust | stable |
 | Git | latest |
 
@@ -25,25 +25,25 @@ Use [fnm](https://www.fnmnode.com/guide/install.html) to install and manage Node
 After installing fnm and configuring your shell according to the fnm documentation, install the Node.js version required by this project:
 
 ```bash
-fnm install 22
-fnm default 22
-fnm use 22
+fnm install 24
+fnm default 24
+fnm use 24
 node -v
 npm -v
 ```
 
-Make sure `node -v` prints `v22.x` or newer before installing pnpm. If Node.js downloads are slow, see the mirror configuration in the fnm documentation. If you do not want to use a version manager, use the [official Node.js download page](https://nodejs.org/en/download) instead.
+Make sure `node -v` prints `v24.x` before installing pnpm. The minimum compatible version is Node.js 20.19.0; 24 LTS is recommended. If Node.js downloads are slow, see the mirror configuration in the fnm documentation. If you do not want to use a version manager, use the [official Node.js download page](https://nodejs.org/en/download) instead.
 
 ## Install pnpm
 
-Sea Lantern uses pnpm. pnpm's documentation states that pnpm 11 requires Node.js 22 or newer, so install Node.js with fnm first.
+Sea Lantern pins pnpm 9.15.9 in `package.json`. Do not use npm or yarn to modify the lockfile.
 
 Use Corepack to pin the pnpm version required by the project:
 
 ```bash
 npm install --global corepack@latest
 corepack enable pnpm
-corepack prepare pnpm@11.11.0 --activate
+corepack prepare pnpm@9.15.9 --activate
 pnpm -v
 ```
 
@@ -174,12 +174,11 @@ Then clone the project and install dependencies:
 ```bash
 git clone https://github.com/SeaLantern-Studio/SeaLantern.git
 cd SeaLantern
-git switch beta
 pnpm install
 ```
 
 Common start command:
 
 ```bash
-pnpm tauri:dev
+pnpm tauri dev
 ```

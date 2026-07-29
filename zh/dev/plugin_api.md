@@ -2,7 +2,7 @@
 
 Sea Lantern 插件运行时基于 Lua。插件通过全局 `sl` 命名空间访问宿主提供的能力。
 
-详细接口定义、参数说明和限制以主仓库 `docs/plugin/` 为准。
+详细接口定义、参数说明和限制以主仓库 `docs/lua-api/` 为准。
 
 :::warning 注意
 本文中的插件指 Sea Lantern Lua 插件，不包含 Minecraft 服务端 Bukkit / Spigot / Paper 插件文件。
@@ -159,10 +159,10 @@ sl.i18n.addTranslations("zh-CN", {
 
 | 内容 | 路径 |
 | --- | --- |
-| 插件 API 文档 | `docs/plugin/*.md` |
-| Lua 运行时 | `backend/tauri-host/src/plugins/runtime/` |
-| 信任规则 | `backend/plugin-trust/` |
-| 命令实现 | `backend/tauri-host/src/commands/plugins/` |
-| 前端 API | `frontend/src/api/plugin.ts` |
+| 插件 API 文档 | `docs/lua-api/*.md` |
+| Lua 运行时 | `crates/extra/src/app_plugin/engine/` |
+| 加载、清单与管理 | `crates/extra/src/app_plugin/` |
+| 前端 API | `src/api/plugin.ts` |
+| 插件 UI | `src/components/plugin/` |
 
-修改插件 API 时，需要同步检查运行时实现、前端封装、命令注册以及文档。插件 UI、权限行为和数据格式均属于兼容性接口。
+修改插件 API 时，需要同步检查运行时实现、前端封装、插件 UI 以及文档。插件 UI、权限行为和数据格式均属于兼容性接口。

@@ -50,7 +50,7 @@ Different Minecraft versions require different Java versions:
 
 ## 5. Start the Server
 
-Click the start button and wait for the console to display `Done!` — your server is now running. You can connect to it in Minecraft using `localhost`.
+Click the start button and wait for a message similar to `Done (1.234s)! For help, type "help"` in the console. The server is then ready, and you can connect in Minecraft using `localhost`.
 
 ---
 

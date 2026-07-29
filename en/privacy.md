@@ -14,7 +14,7 @@ Please read and fully understand all terms of this agreement before using the so
 
 **1.1 Software nature**
 
-The software is an open-source Minecraft server management tool. Its source code is released under the GPLv3 license.
+The software is an open-source Minecraft server management tool. Its source code is released under the AGPLv3 license.
 
 **1.2 Transparency principle**
 
@@ -26,11 +26,11 @@ By using the software, you are deemed to have read and agreed to this agreement.
 
 ## 2. Current Information Collection Status
 
-As of the effective date of this agreement, SeaLantern itself does not collect any personal information. Details are as follows:
+As of the effective date of this agreement, SeaLantern includes no telemetry, advertising trackers, or usage analytics. Details are as follows:
 
 **2.1 No automatic information collection**
 
-During operation, the software does not actively collect, upload, or store any device information, usage logs, crash reports, IP addresses, or other information that can identify an individual. All operations are completed on your local device.
+The software does not automatically upload device information, usage logs, crash reports, or other identifying information to the project team. Server configuration, worlds, and runtime logs are stored locally by default.
 
 **2.2 No sensitive permissions requested**
 
@@ -39,6 +39,10 @@ The software does not request sensitive operating-system permissions such as con
 **2.3 Information voluntarily provided by users**
 
 When you contact us through GitHub Issues, email, or community channels, you may voluntarily provide contact information such as your GitHub username or email address, as well as feedback content. This information is used only to communicate with you and is provided voluntarily by you. It is not automatically collected by the software.
+
+**2.4 On-demand network features**
+
+When you use core downloads, update checks, the plugin market, or P2P multiplayer, the software connects to the relevant third-party service or multiplayer peer. Network information required to complete the request, such as an IP address and request content, may be processed under the provider's privacy policy. The project team does not separately collect this information for telemetry.
 
 ## 3. Possible Future Changes
 
@@ -58,7 +62,7 @@ You have the right to refuse future information collection at any time, such as 
 
 **4.1 Current status**
 
-Because the software currently does not collect information, there is currently no information sharing.
+The project team does not sell or proactively share software usage data. Third-party services used by on-demand network features process the information required to complete each request under their own privacy policies.
 
 **4.2 Future exceptions**
 

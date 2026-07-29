@@ -2,7 +2,7 @@
 
 Sea Lantern plugins run on Lua. Plugins access host capabilities through the global `sl` namespace.
 
-Detailed API definitions, parameters, return values, and limits are maintained in the main repository under `docs/plugin/`.
+Detailed API definitions, parameters, return values, and limits are maintained in the main repository under `docs/lua-api/`.
 
 :::warning Note
 Plugins in this document mean Sea Lantern Lua plugins. They are not Minecraft server Bukkit / Spigot / Paper plugin files.
@@ -159,10 +159,10 @@ Plugins using these permissions require extra review and user confirmation.
 
 | Content | Path |
 | --- | --- |
-| Plugin API docs | `docs/plugin/*.md` |
-| Lua runtime | `backend/tauri-host/src/plugins/runtime/` |
-| Trust rules | `backend/plugin-trust/` |
-| Command implementation | `backend/tauri-host/src/commands/plugins/` |
-| Frontend API | `frontend/src/api/plugin.ts` |
+| Plugin API docs | `docs/lua-api/*.md` |
+| Lua runtime | `crates/extra/src/app_plugin/engine/` |
+| Loading, manifests, and management | `crates/extra/src/app_plugin/` |
+| Frontend API | `src/api/plugin.ts` |
+| Plugin UI | `src/components/plugin/` |
 
-When changing plugin APIs, check the runtime implementation, frontend wrapper, command registration, and documentation together. Plugin UI, permission behavior, and data formats are compatibility surfaces.
+When changing plugin APIs, check the runtime implementation, frontend wrapper, plugin UI, and documentation together. Plugin UI, permission behavior, and data formats are compatibility surfaces.

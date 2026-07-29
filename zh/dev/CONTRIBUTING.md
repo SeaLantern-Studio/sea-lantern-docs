@@ -36,9 +36,9 @@
 
 | 依赖 | 版本 |
 | --- | --- |
-| Node.js | 22.12.0+ |
+| Node.js | 24 LTS（最低 20.19.0） |
 | Rust | stable |
-| pnpm | 11.11.0 |
+| pnpm | 9.15.9 |
 
 ## 代码规范
 
@@ -55,7 +55,7 @@
 
    ```bash
    # 建议通过所有 clippy 检查
-   cargo clippy --workspace -- -D warnings
+   cargo clippy --all-targets --workspace -- -D warnings
    ```
 
 3. **命名规范**
@@ -134,7 +134,7 @@
 
 ### Commit 建议
 
-提交信息当前不再由本地 Hook 或 CI 强制校验，但仍建议保持清晰、可读，方便后续审查与回溯。
+提交前，Husky 会通过 lint-staged 格式化已暂存的前端和文档文件。提交信息仍建议保持清晰、可读，方便后续审查与回溯。
 
 推荐使用简洁的约定式风格，例如：
 
@@ -159,10 +159,11 @@ chore: 调整构建或目录结构
    ```bash
    # 确保代码通过检查
    cargo fmt --all -- --check
-   cargo clippy --workspace -- -D warnings
+   cargo check --all-targets --workspace
+   cargo clippy --all-targets --workspace -- -D warnings
    pnpm fmt:check
    pnpm lint
-   pnpm build
+   pnpm build:check
 
    # 提交变更
    git add .
@@ -206,13 +207,13 @@ chore: 调整构建或目录结构
 
 ```bash
 pnpm install
-pnpm tauri:dev
+pnpm tauri dev
 ```
 
 ### 如何构建发布版本？
 
 ```bash
-pnpm tauri:build
+pnpm tauri build
 ```
 
 但我们不推荐本地构建用来发布到 Release 中

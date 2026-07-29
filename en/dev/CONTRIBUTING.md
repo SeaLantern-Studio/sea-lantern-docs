@@ -36,9 +36,9 @@ Development team invitations consider:
 
 | Dependency | Version |
 | --- | --- |
-| Node.js | 22.12.0+ |
+| Node.js | 24 LTS (minimum 20.19.0) |
 | Rust | stable |
-| pnpm | 11.11.0 |
+| pnpm | 9.15.9 |
 
 ## Code Style
 
@@ -53,7 +53,7 @@ Development team invitations consider:
 2. **Checks**
 
    ```bash
-   cargo clippy --workspace -- -D warnings
+   cargo clippy --all-targets --workspace -- -D warnings
    ```
 
 3. **Naming**
@@ -132,7 +132,7 @@ This keeps DOM duplication lower, improves accessibility consistency, and separa
 
 ### Commits
 
-Commit messages are no longer enforced by local hooks or CI, but they should remain clear and readable.
+Before each commit, Husky runs lint-staged to format staged frontend and documentation files. Commit messages should remain clear and readable.
 
 Recommended style:
 
@@ -156,10 +156,11 @@ Run the necessary checks before committing. CI will continue to check quality on
 
    ```bash
    cargo fmt --all -- --check
-   cargo clippy --workspace -- -D warnings
+   cargo check --all-targets --workspace
+   cargo clippy --all-targets --workspace -- -D warnings
    pnpm fmt:check
    pnpm lint
-   pnpm build
+   pnpm build:check
 
    git add .
    git commit -m "feat(scope): your change"
@@ -200,13 +201,13 @@ Run the necessary checks before committing. CI will continue to check quality on
 
 ```bash
 pnpm install
-pnpm tauri:dev
+pnpm tauri dev
 ```
 
 ### How do I build a release version?
 
 ```bash
-pnpm tauri:build
+pnpm tauri build
 ```
 
 Do not use local builds as official release artifacts.

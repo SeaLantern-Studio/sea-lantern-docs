@@ -14,7 +14,7 @@ export const en = defineConfig({
     },
 
     footer: {
-      message: 'Released under the GPL-3.0 License',
+      message: 'Sea Lantern is released under the AGPL-3.0 License',
       copyright: '© 2024-present SeaLantern Studio',
     },
 
@@ -64,7 +64,6 @@ function sidebar(): DefaultTheme.Sidebar {
             collapsed: true,
             items: [
               { text: 'Environment Setup', link: '/en/dev/environment' },
-              { text: 'Language System', link: '/en/dev/language-system' },
               { text: 'Contributing', link: '/en/dev/CONTRIBUTING' },
               { text: 'Project Structure', link: '/en/dev/STRUCTURE' },
               { text: 'Plugin API', link: '/en/dev/plugin_api' },

@@ -6,7 +6,7 @@
 
 ## 环境准备
 
-- [Node.js](https://nodejs.org) 20+
+- [Node.js](https://nodejs.org) 24 LTS
 - [pnpm](https://pnpm.io) 9.15.9（通过 `corepack enable` 启用）
 
 ## 开发流程

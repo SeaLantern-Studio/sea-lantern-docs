@@ -50,7 +50,7 @@ Minecraft 不同版本對 Java 的要求不同：
 
 ## 5. 啟動伺服器
 
-點擊啟動按鈕，等待控制台顯示 `Done!` 即表示伺服器啟動成功。此時您可以在 Minecraft 中透過 `localhost` 連線到您的伺服器。
+點擊啟動按鈕，等待控制台出現類似 `Done (1.234s)! For help, type "help"` 的日誌，即表示伺服器啟動成功。此時您可以在 Minecraft 中透過 `localhost` 連線到您的伺服器。
 
 ---
 

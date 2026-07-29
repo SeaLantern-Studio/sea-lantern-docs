@@ -6,7 +6,7 @@ Thanks for your interest in the Sea Lantern documentation! Here's how to contrib
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org) 20+
+- [Node.js](https://nodejs.org) 24 LTS
 - [pnpm](https://pnpm.io) 9.15.9 (enable via `corepack enable`)
 
 ## Development

@@ -2,25 +2,24 @@
 import FeatureShowcase from '../.vitepress/theme/components/FeatureShowcase.vue'
 
 const featureItems = [
-  { title: '即時控制台', desc: '即時查看日誌，直接輸入命令，並支援命令歷史。', note: '適合排查啟動錯誤與日常維運，不需頻繁切換外部終端。' },
-  { title: '圖形化配置', desc: 'server.properties 視覺化編輯，依分類整理，減少手動改檔。', note: '常見參數可快速定位；需重啟生效的項目仍遵循伺服端規則。' },
-  { title: '玩家管理', desc: '白名單、封禁、OP 操作集中在同一入口。', note: '線上狀態與權限操作集中呈現，降低手動記憶指令成本。' },
-  { title: '插件系統', desc: '基於 Lua 腳本擴展，支援自訂 UI 元件、右鍵選單與插件市場。', note: 'v1.0.0 持續優化權限面板與市場狀態保留，使用流程更穩定。' },
-  { title: '建立流程 2.0', desc: '支援 JAR/腳本/既有伺服器匯入，智慧偵測開服方式並可自訂命令。', note: '可在建立階段自動安裝整合包，減少首次開服手動操作。' },
-  { title: '主題系統', desc: '內建 5 套主題，支援明暗模式；Windows 支援亞克力效果。', note: '切換主題不改變功能布局，重點在可讀性與視覺風格。' },
-  { title: '多語言支援', desc: '內建 10 種語言，包含中文、英語、日語、韓語等。', note: '支援執行中切換語言，介面與文件術語盡量保持一致。' },
-  { title: 'Java 管理', desc: '自動偵測已安裝 Java，並支援一鍵下載安裝。', note: 'v1.0.0 擴充常見安裝路徑掃描，降低已安裝卻未識別的情況。' },
-  { title: 'Mod 管理', desc: '檢視伺服端已安裝的 Mod/插件，並提供基礎管理能力。', note: '目前以本地檢視與基礎維護為主，方便先排查再調整。' },
-  { title: '安全退出', desc: '關閉軟體時自動停止伺服器，降低存檔損壞風險。', note: '避免直接強制結束行程，降低世界與玩家資料異常機率。' },
-  { title: '自動更新', desc: '檢查新版本並跳轉下載頁面（Arch Linux 使用 AUR 更新）。', note: '桌面端以下載引導為主，不會在背景靜默覆蓋你的安裝。' },
-  { title: '跨平台', desc: '支援 Windows、macOS、Linux（含 Arch Linux AUR）。', note: '不同平台能力會有差異，文件會單獨標示平台特定行為。' },
+  { title: '伺服器管理', desc: '集中管理多個 Minecraft 伺服器及其執行狀態。' },
+  { title: '伺服器建立', desc: '支援 JAR、既有伺服器和啟動腳本匯入，並可自訂啟動命令。' },
+  { title: '核心下載', desc: '在應用內查找並下載常用 Minecraft 伺服端核心。' },
+  { title: '即時控制台', desc: '即時查看日誌、傳送命令並保留命令歷史。' },
+  { title: '設定管理', desc: '視覺化編輯啟動設定和 server.properties，支援搜尋與差異比較。' },
+  { title: '玩家管理', desc: '管理線上玩家、白名單、封禁和 OP 權限。' },
+  { title: 'P2P 連線', desc: '無需公網 IP，建立連線隧道並產生連線憑證。' },
+  { title: '插件系統', desc: '透過 Lua 插件擴充頁面、元件、選單和應用能力。' },
+  { title: '伺服端擴充', desc: '查看和管理伺服器中的 Mod 與插件檔案。' },
+  { title: 'Java 管理', desc: '自動偵測本機 Java，並支援按需下載安裝。' },
+  { title: '個人化', desc: '提供多套主題、明暗模式和 Windows 亞克力效果。' },
+  { title: '多語言', desc: '內建 10 種語言，支援執行階段切換。' },
 ]
 </script>
 
 # 專案簡介
 
-Sea Lantern（海晶燈）是一個**輕量化**的 Minecraft 伺服器管理工具。  
-基於 **Tauri 2 + Rust + Vue 3** 建構。
+Sea Lantern（海晶燈）是一個**輕量化**的 Minecraft 伺服器管理工具。
 
 ## 特性
 
@@ -31,19 +30,22 @@ Sea Lantern（海晶燈）是一個**輕量化**的 Minecraft 伺服器管理工
 
 ## 技術棧
 
-- **前端**: Vue 3 + TypeScript + Vite + Pinia
+- **前端**: Vue 3 + TypeScript + Vite
 - **後端**: Rust + Tauri 2
-- **樣式**: CSS Variables 設計系統 + 主題引擎
-- **圖表**: ECharts
-- **套件管理**: pnpm
-- **程式碼檢查**: oxlint + oxfmt
+- **通訊**: Tauri invoke
+- **Docker**: itzg/minecraft-server
 
 沒有 Electron，沒有 Node 後端，沒有 Webpack。啟動快，體積小，記憶體省。
 
-## 交流
+> 使用系統 Webview 渲染。
 
-QQ 交流群：**293748695**，歡迎加入討論！
+## 社群
+
+如果你在使用中遇到問題，或想參與討論，可以透過以下方式聯絡我們：
+
+- QQ 一群：**293748695**
+- QQ 二群：**1085823754**
 
 ## 開源協議
 
-[GNU General Public License v3.0](https://github.com/SeaLantern-Studio/SeaLantern/blob/main/LICENSE)
+[GNU Affero General Public License v3.0](https://github.com/SeaLantern-Studio/SeaLantern/blob/main/LICENSE)

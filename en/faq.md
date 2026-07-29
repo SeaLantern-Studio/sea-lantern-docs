@@ -44,7 +44,7 @@ You must accept the Minecraft EULA on first launch. Sea Lantern will show a prom
 ### Commands Have No Effect
 
 - Confirm the command format is correct (no `/` prefix in the console)
-- Confirm the server has fully started (console shows `Done!`)
+- Confirm the server has fully started (the console shows a message similar to `Done (1.234s)! For help, type "help"`)
 
 ## Can't Connect to Server
 
@@ -52,7 +52,7 @@ You must accept the Minecraft EULA on first launch. Sea Lantern will show a prom
 
 In Minecraft, add a server with the address `localhost` or `127.0.0.1`.
 
-- Confirm the server is running and the console shows `Done!`
+- Confirm the server is running and the console shows a message similar to `Done (1.234s)! For help, type "help"`
 - Confirm the client version matches the server version
 - If you changed the port, include it in the address, e.g. `localhost:25566`
 
@@ -65,8 +65,9 @@ Other players connect using your **LAN IP** (e.g. `192.168.1.100:25565`).
 
 ### Internet Connection
 
-Remote players need your **public IP** or domain name.
+Choose one of these options for remote multiplayer:
 
+- Use Sea Lantern's built-in P2P multiplayer feature to create a tunnel and connection ticket without a public IP
 - You need to configure port forwarding on your router (forward external 25565 to your local IP)
 - Or use a tunneling service (e.g. frp, ngrok)
 - Check your firewall settings
@@ -168,7 +169,7 @@ Sea Lantern needs file system, network, and program execution permissions — th
 
 ### Is Sea Lantern safe?
 
-Sea Lantern is open-source software with fully transparent code. It does not connect to any third-party servers, and all data is stored locally.
+Sea Lantern is open-source and its code can be reviewed publicly. Server configuration and worlds remain local; core downloads, updates, the plugin market, and P2P multiplayer access network services when requested.
 
 ### Which Minecraft versions are supported?
 

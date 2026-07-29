@@ -14,7 +14,7 @@ export const zhTw = defineConfig({
     },
 
     footer: {
-      message: '基於 GPL-3.0 許可發布',
+      message: 'Sea Lantern 基於 AGPL-3.0 許可發布',
       copyright: '© 2024-present SeaLantern Studio',
     },
 
@@ -83,7 +83,6 @@ function sidebar(): DefaultTheme.Sidebar {
             collapsed: true,
             items: [
               { text: '環境配置', link: '/zh-tw/dev/environment' },
-              { text: '語言系統', link: '/zh-tw/dev/language-system' },
               { text: '貢獻指南', link: '/zh-tw/dev/CONTRIBUTING' },
               { text: '專案結構', link: '/zh-tw/dev/STRUCTURE' },
               { text: '插件 API', link: '/zh-tw/dev/plugin_api' },

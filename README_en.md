@@ -22,7 +22,7 @@ Available in three languages: 简体中文 · English · 繁體中文
 
 ## Local Development
 
-Requires [Node.js](https://nodejs.org) 20+:
+[Node.js](https://nodejs.org) 24 LTS is recommended:
 
 ```bash
 corepack enable          # Enable pnpm
@@ -60,4 +60,4 @@ Contributions are welcome! Please read the [Contributing Guide](./CONTRIBUTING_e
 
 ## License
 
-[GPL-3.0](./LICENSE)
+[MIT](./LICENSE)

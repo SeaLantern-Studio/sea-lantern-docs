@@ -1,5 +1,5 @@
 <script setup>
-import { VERSION, RELEASE_BASE, ASSET_VERSION, RPM_ASSET_VERSION, ARCH_PKG_ASSET_VERSION } from '../.vitepress/version'
+import { VERSION, RELEASE_BASE, ASSET_VERSION, RPM_ASSET_VERSION } from '../.vitepress/version'
 </script>
 
 # Download
@@ -59,7 +59,6 @@ If it is still blocked, open “System Settings -> Privacy & Security” and cli
 | <a :href="`${RELEASE_BASE}/Sea.Lantern-${RPM_ASSET_VERSION}.aarch64.rpm`">rpm (ARM64)</a> | Fedora / RHEL (aarch64) |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_amd64.AppImage`">AppImage</a> | Universal format |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_aarch64.AppImage`">AppImage (ARM64)</a> | Universal format (ARM64) |
-| <a :href="`${RELEASE_BASE}/sealantern-${ARCH_PKG_ASSET_VERSION}-x86_64.pkg.tar.zst`">pkg.tar.zst</a> | Arch Linux installable package (x86_64) |
 
 Arch Linux users can install via AUR, for example:
 

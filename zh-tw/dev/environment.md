@@ -13,8 +13,8 @@ Sea Lantern 是 Tauri 2 + Vue 3 + Rust 專案。開發環境需要準備好：
 
 | 工具 | 建議版本 |
 | --- | --- |
-| Node.js | 22.12.0+ |
-| pnpm | 11.11.0 |
+| Node.js | 24 LTS（最低 20.19.0） |
+| pnpm | 9.15.9 |
 | Rust | stable |
 | Git | latest |
 
@@ -25,25 +25,25 @@ Sea Lantern 是 Tauri 2 + Vue 3 + Rust 專案。開發環境需要準備好：
 按 fnm 文件完成安裝和 Shell 配置後，安裝專案需要的 Node.js 版本：
 
 ```bash
-fnm install 22
-fnm default 22
-fnm use 22
+fnm install 24
+fnm default 24
+fnm use 24
 node -v
 npm -v
 ```
 
-確認 `node -v` 顯示 `v22.x` 或更新版本後，再繼續安裝 pnpm。如果 fnm 下載 Node.js 很慢，可以參考 fnm 文件中的鏡像配置；不想使用版本管理器時，再考慮 [Node.js 官方下載頁](https://nodejs.org/zh-tw/download)。
+確認 `node -v` 顯示 `v24.x` 後，再繼續安裝 pnpm。最低相容版本為 Node.js 20.19.0；建議使用 24 LTS。如果 fnm 下載 Node.js 很慢，可以參考 fnm 文件中的鏡像配置；不想使用版本管理器時，再考慮 [Node.js 官方下載頁](https://nodejs.org/zh-tw/download)。
 
 ## 安裝 pnpm
 
-Sea Lantern 使用 pnpm。pnpm 官方文件說明，pnpm 11 需要 Node.js 22 或更新版本；因此請先用 fnm 完成 Node.js 安裝。
+Sea Lantern 使用 `package.json` 中固定的 pnpm 9.15.9，請勿混用 npm 或 yarn 修改鎖定檔。
 
 推薦使用 Corepack 固定專案需要的 pnpm 版本：
 
 ```bash
 npm install --global corepack@latest
 corepack enable pnpm
-corepack prepare pnpm@11.11.0 --activate
+corepack prepare pnpm@9.15.9 --activate
 pnpm -v
 ```
 
@@ -174,12 +174,11 @@ git --version
 ```bash
 git clone https://github.com/SeaLantern-Studio/SeaLantern.git
 cd SeaLantern
-git switch beta
 pnpm install
 ```
 
 常用啟動命令：
 
 ```bash
-pnpm tauri:dev
+pnpm tauri dev
 ```
