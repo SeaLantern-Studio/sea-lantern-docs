@@ -23,6 +23,8 @@ import { VERSION, RELEASE_BASE, ASSET_VERSION, RPM_ASSET_VERSION } from '../.vit
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64_zh-CN.msi`">msi 安装包</a> | Windows Installer 格式 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64-setup.exe`">exe 安装包 (ARM64)</a> | 适用于 Windows on ARM |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64_zh-CN.msi`">msi 安装包 (ARM64)</a> | Windows Installer (ARM64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_windows_x64_portable.zip`">zip 便携包</a> | 解压即用 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_windows_arm64_portable.zip`">zip 便携包 (ARM64)</a> | 解压即用 (Windows on ARM) |
 
 ## macOS
 
@@ -30,10 +32,10 @@ import { VERSION, RELEASE_BASE, ASSET_VERSION, RPM_ASSET_VERSION } from '../.vit
 |------|------|
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_aarch64.dmg`">dmg (Apple Silicon)</a> | M1 / M2 / M3 / M4 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64.dmg`">dmg (Intel)</a> | x64 架构 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_aarch64.app.tar.gz`">app.tar.gz (Apple Silicon)</a> | 便携压缩包 |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_x64.app.tar.gz`">app.tar.gz (Intel)</a> | 便携压缩包 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_macos_arm64_portable.tar.gz`">tar.gz (Apple Silicon)</a> | 便携压缩包 |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_macos_x64_portable.tar.gz`">tar.gz (Intel)</a> | 便携压缩包 |
 
-当前 Release 中的 `dmg` 与 `app.tar.gz` 均未进行 Apple 签名/公证，macOS 可能提示“已损坏，无法打开”或“无法验证开发者”。
+当前 Release 中的 `dmg` 与 `tar.gz` 均未进行 Apple 签名/公证，macOS 可能提示“已损坏，无法打开”或“无法验证开发者”。
 
 - `dmg`：先双击打开 DMG，并将 `Sea Lantern.app` 拖到 `/Applications`，再在终端执行：
 
@@ -41,7 +43,7 @@ import { VERSION, RELEASE_BASE, ASSET_VERSION, RPM_ASSET_VERSION } from '../.vit
 xattr -dr com.apple.quarantine /Applications/Sea\ Lantern.app
 ```
 
-- `app.tar.gz`：先解压，再在解压后的当前目录执行：
+- `tar.gz`：先解压，再在解压后的当前目录执行：
 
 ```bash
 xattr -dr com.apple.quarantine ./Sea\ Lantern.app

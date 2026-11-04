@@ -23,6 +23,8 @@ Choose the package that matches your system, then download and install it.
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64_zh-CN.msi`">msi installer</a> | Windows Installer format |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64-setup.exe`">exe installer (ARM64)</a> | For Windows on ARM |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_arm64_zh-CN.msi`">msi installer (ARM64)</a> | Windows Installer (ARM64) |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_windows_x64_portable.zip`">zip portable</a> | Extract and run |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_windows_arm64_portable.zip`">zip portable (ARM64)</a> | Extract and run (Windows on ARM) |
 
 ## macOS
 
@@ -30,10 +32,10 @@ Choose the package that matches your system, then download and install it.
 |--------|-------------|
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_aarch64.dmg`">dmg (Apple Silicon)</a> | M1 / M2 / M3 / M4 |
 | <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_x64.dmg`">dmg (Intel)</a> | x64 architecture |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_aarch64.app.tar.gz`">app.tar.gz (Apple Silicon)</a> | Portable archive |
-| <a :href="`${RELEASE_BASE}/Sea.Lantern_x64.app.tar.gz`">app.tar.gz (Intel)</a> | Portable archive |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_macos_arm64_portable.tar.gz`">tar.gz (Apple Silicon)</a> | Portable archive |
+| <a :href="`${RELEASE_BASE}/Sea.Lantern_${ASSET_VERSION}_macos_x64_portable.tar.gz`">tar.gz (Intel)</a> | Portable archive |
 
-The `dmg` and `app.tar.gz` files in the current release are not Apple-signed or notarized. macOS may warn that the app is “damaged” or that the developer cannot be verified.
+The `dmg` and `tar.gz` files in the current release are not Apple-signed or notarized. macOS may warn that the app is “damaged” or that the developer cannot be verified.
 
 - `dmg`: open the DMG first, drag `Sea Lantern.app` into `/Applications`, then run this in Terminal:
 
@@ -41,7 +43,7 @@ The `dmg` and `app.tar.gz` files in the current release are not Apple-signed or 
 xattr -dr com.apple.quarantine /Applications/Sea\ Lantern.app
 ```
 
-- `app.tar.gz`: extract it first, then run this in the extracted directory:
+- `tar.gz`: extract it first, then run this in the extracted directory:
 
 ```bash
 xattr -dr com.apple.quarantine ./Sea\ Lantern.app
